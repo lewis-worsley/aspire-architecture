@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section>
+    <div>
+        <div>
+            <h2>CURRENT PROJECTS</h2>
+            <p>Get inspired and discover some of our current live projects happening right now as we speak...</p>
+        </div>
+        
+        {% for project in projects %}
+        <div>
+            <h3>{{project.project_name}}</h3>
+            <p>{{project.description}}</p>
+            <button>></button>
+        </div>
+        {% endfor %}
+
+    </div>
+</section>
+{% endblock content %}
