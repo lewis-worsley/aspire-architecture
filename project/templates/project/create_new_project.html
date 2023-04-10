@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+    <form action="post" enctype="multipart/form-data">{% csrf_token %}
+
+        <div>
+            <label for="id_project_name">Project name</label>
+            <input type="text" name="project_name" id="id_project_name" placeholder="Project name" required autofocus>
+        </div>
+        <div>
+            <label for="id_descripion">Description</label>
+            <textarea type="text" name="description" id="id_descripion" placeholder="Description" cols="30" rows="10"
+                required></textarea>
+        </div>
+        <div>
+            <label for="id_image">Image</label>
+            <input type="file" name="image" id="id_image" accept="image/*" required>
+        </div>
+        <div>
+            <label for="id_client_name">Client</label>
+            <input type="text" name="client_name" id="id_client_name" placeholder="Client" required>
+        </div>
+        <div>
+            <label for="id_location">Location</label>
+            <input type="text" name="location" id="id_location" placeholder="Location" required>
+        </div>
+        <div>
+            <label for="id_tagline">Tagline</label>
+            <input type="text" name="tagline" id="id_tagline" placeholder="Tagline" required>
+        </div>
+
+        <button type="submit">POST</button>
+
+    </form>
+</div>
+{% endblock content %}

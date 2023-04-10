@@ -12,28 +12,13 @@
     <div>
         {% include 'snippets/header.html' %}
     </div>
-    
-    <div id="about">
-        {% include 'about.html' %}
-    </div>
 
-    <div id="services">
-        {% include 'services.html' %}
-    </div>
-    
-    <div style="background-color: yellow;">
-        <h3>READY TO BRING YOUR IDEA TO LIFE</h3>
-        <p>Get inspired by Aspire and find out how we can help you</p>
-        <button>I'M READY!</button>
-    </div>
+    {% block content %}
+    {% endblock content %}
 
-    <div id="projects">
-        {% block content %}
-
-        {% endblock content %}
+    <div>
+        {% include 'snippets/footer.html' %}
     </div>
-
-    {% include 'snippets/footer.html' %}
 </body>
 
 </html>

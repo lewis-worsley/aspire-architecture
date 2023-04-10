@@ -1,5 +1,7 @@
 from django.db import models
 
+# from cloudinary.models import CloudinaryField
+
 # Create your models here.
 STATUS = ((0, "Draft"), (1, "Pending Approval"), (2, "Published"))
 
@@ -7,6 +9,7 @@ class Project(models.Model):
     project_name = models.CharField(max_length=30, unique=True)
     slug = models.SlugField(unique=True, null=False)
     description = models.TextField()
+    # featured_image = CloudinaryField('image', default='placeholder')
     client_name = models.CharField(max_length=30)
     location = models.CharField(max_length=30)
     updated_on = models.DateTimeField(auto_now=True)
