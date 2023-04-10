@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aspire Architecture</title>
+</head>
+
+<body>
+    <div>
+        {% include 'snippets/header.html' %}
+    </div>
+    
+    <div id="about">
+        {% include 'about.html' %}
+    </div>
+
+    <div id="services">
+        {% include 'services.html' %}
+    </div>
+    
+    <div style="background-color: yellow;">
+        <h3>READY TO BRING YOUR IDEA TO LIFE</h3>
+        <p>Get inspired by Aspire and find out how we can help you</p>
+        <button>I'M READY!</button>
+    </div>
+
+    <div id="projects">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+
+    {% include 'snippets/footer.html' %}
+</body>
+
+</html>
