@@ -3,7 +3,7 @@
 {% block content %}
 
 <div>
-    <form action="post" enctype="multipart/form-data">{% csrf_token %}
+    <form method="post" enctype="multipart/form-data">{% csrf_token %}
 
         <div>
             <label for="id_project_name">Project name</label>
@@ -14,10 +14,15 @@
             <textarea type="text" name="description" id="id_descripion" placeholder="Description" cols="30" rows="10"
                 required></textarea>
         </div>
-        <div>
+        <!-- <div>
+            <label for="id_slug">Description</label>
+            <input type="text" name="slug" id="id_slug" placeholder="Slug" cols="30" rows="10"
+                required>
+        </div> -->
+        <!-- <div>
             <label for="id_image">Image</label>
             <input type="file" name="image" id="id_image" accept="image/*" required>
-        </div>
+        </div> -->
         <div>
             <label for="id_client_name">Client</label>
             <input type="text" name="client_name" id="id_client_name" placeholder="Client" required>
