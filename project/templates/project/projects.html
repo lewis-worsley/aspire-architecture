@@ -9,20 +9,27 @@
         </div>
         
         {% for project in projects %}
+        
         <div>
+            {% if project.status == 2 %} <!-- Show Published projects -->
             <div>
                 {% if "placeholder" in project.featured_image.url %}
-                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="" width="300px">
+                    <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="" width="300px">
                 {% else %}
-                <img src="{{ project.featured_image.url }}" alt="" value="">
+                    <img src="{{ project.featured_image.url }}" alt="" value="">
+                    <h3>{{project.project_name}}</h3>
+                    <p>{{project.description}}</p>
+                    <button>></button>
+                    <a href="/project/edit/{{ project.slug }}">
+                        <button>UPDATE PROJECT</button>
+                    </a>
                 {% endif %}
             </div>
-            <h3>{{project.project_name}}</h3>
-            <p>{{project.description}}</p>
-            <button>></button>
-            <a href="/project/edit/{{ project.slug }}">
-                <button>UPDATE PROJECT</button>
-            </a>
+            
+            {% else %}
+
+            {% endif %}
+            
         </div>
         {% endfor %}
 
