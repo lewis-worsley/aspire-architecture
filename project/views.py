@@ -6,9 +6,6 @@ from project.forms import ProjectForm, UpdateProjectForm
 
 # Create your views here.
 
-# def home_view(request):
-#     return render(request, 'base.html')
-
 def home_view(request):
 
     context = {}
@@ -22,7 +19,7 @@ def home_view(request):
 def create_project_view(request):
 
     if request.method == "POST":
-        form = ProjectForm(request.POST)
+        form = ProjectForm(request.POST or None, request.FILES or None)
 
         if form.is_valid():
             item = form.save(commit=False)
@@ -43,7 +40,7 @@ def edit_project(request, slug):
     project = get_object_or_404(Project, slug=slug)
 
     if request.method == "POST":
-        form = UpdateProjectForm(request.POST or None, instance=project)
+        form = UpdateProjectForm(request.POST or None, request.FILES or None, instance=project)
         if form.is_valid():
             item = form.save(commit=False)
             item.slug = slugify(item.project_name)

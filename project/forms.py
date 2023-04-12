@@ -8,7 +8,8 @@ class ProjectForm(forms.ModelForm):
         model = Project
         fields = [
             'project_name', 
-            'description', 
+            'description',
+            'featured_image',
             'client_name', 
             'location', 
             'tagline'
@@ -20,20 +21,22 @@ class UpdateProjectForm(forms.ModelForm):
         model = Project
         fields = [
             'project_name', 
-            'description', 
+            'description',
+            'featured_image',
             'client_name', 
             'location', 
             'tagline'
             ]
-    
-    def save(self, commit=True):
-        project = self.instance
-        project.project_name = self.cleaned_data['project_name']
-        project.description = self.cleaned_data['description']
-        project.client_name = self.cleaned_data['client_name']
-        project.location = self.cleaned_data['location']
-        project.tagline = self.cleaned_data['tagline']
 
-        if commit:
-            project.save()
-        return project
+        
+    # def save(self, commit=True):
+    #     project = self.instance
+    #     project.project_name = self.cleaned_data['project_name']
+    #     project.description = self.cleaned_data['description']
+    #     project.client_name = self.cleaned_data['client_name']
+    #     project.location = self.cleaned_data['location']
+    #     project.tagline = self.cleaned_data['tagline']
+
+    #     if commit:
+    #         project.save()
+    #     return project
