@@ -7,12 +7,12 @@
 
         <div>
             <label for="id_project_name">Project name</label>
-            <input type="text" name="project_name" id="id_project_name" placeholder="Project name" required autofocus>
+            <input type="text" name="project_name" id="id_project_name" placeholder="Project name" value="{{form.initial.project_name}}" required autofocus>
         </div>
         <div>
             <label for="id_descripion">Description</label>
             <textarea type="text" name="description" id="id_descripion" placeholder="Description" cols="30" rows="10"
-                required></textarea>
+                required>{{form.initial.description}}</textarea>
         </div>
         <!-- <div>
             <label for="id_image">Image</label>
@@ -20,18 +20,18 @@
         </div> -->
         <div>
             <label for="id_client_name">Client</label>
-            <input type="text" name="client_name" id="id_client_name" placeholder="Client" required>
+            <input type="text" name="client_name" id="id_client_name" placeholder="Client" value="{{form.initial.client_name}}" required>
         </div>
         <div>
             <label for="id_location">Location</label>
-            <input type="text" name="location" id="id_location" placeholder="Location" required>
+            <input type="text" name="location" id="id_location" placeholder="Location" value="{{form.initial.location}}" required>
         </div>
         <div>
             <label for="id_tagline">Tagline</label>
-            <input type="text" name="tagline" id="id_tagline" placeholder="Tagline" required>
+            <input type="text" name="tagline" id="id_tagline" placeholder="Tagline" value="{{form.initial.tagline}}" required>
         </div>
 
-        <button type="submit">POST</button>
+        <button type="submit">UPDATE</button>
 
     </form>
 </div>
