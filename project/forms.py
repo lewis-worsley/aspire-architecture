@@ -28,7 +28,7 @@ class UpdateProjectForm(forms.ModelForm):
             'tagline'
             ]
 
-        
+
     # def save(self, commit=True):
     #     project = self.instance
     #     project.project_name = self.cleaned_data['project_name']
