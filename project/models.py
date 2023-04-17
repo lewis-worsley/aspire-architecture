@@ -11,12 +11,12 @@ class Project(models.Model):
     description = models.TextField()
     featured_image = CloudinaryField('image', default='placeholder')
     client_name = models.CharField(max_length=30)
-    location = models.CharField(max_length=30)
+    location = models.CharField(max_length=50)
     updated_on = models.DateTimeField(auto_now=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     finished = models.BooleanField(default=False)
-    tagline = models.CharField(max_length=20)
+    tagline = models.CharField(max_length=50)
 
     class Meta:
         ordering = ['-created_on']

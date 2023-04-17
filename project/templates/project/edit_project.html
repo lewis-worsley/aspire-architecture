@@ -2,6 +2,8 @@
 
 {% block content %}
 
+{% if user.is_staff == True %}
+
 <div>
     
     <form method="post" enctype="multipart/form-data">{% csrf_token %}
@@ -37,5 +39,11 @@
     </form>
 
 </div>
+
+{% else %}
+
+<p>Sorry, you're not permitted to edit this project. Please return to the <a href="/">homepage</a>.</p>
+
+{% endif %}
 
 {% endblock content %}

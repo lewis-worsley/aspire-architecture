@@ -14,22 +14,72 @@
             <div>
                 {% if "placeholder" in project.featured_image.url %}
                     <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="" width="300px">
+                    <h3>{{project.project_name}}</h3>
+                    <p>{{project.description}}</p>
+                    <button>></button>
+                    {% if user.is_staff == True %}
+                    <a href="/project/edit/{{ project.slug }}">UPDATE</a>
+                    <a href="/project/delete/{{ project.slug }}">DELETE</a>
+                    {% else %}
+                    {% endif %}
                 {% else %}
                     <img src="{{ project.featured_image.url }}" width="300px" alt="" value="">
                     <h3>{{project.project_name}}</h3>
                     <p>{{project.description}}</p>
                     <button>></button>
-                    <a href="/project/edit/{{ project.slug }}">
-                        <button>UPDATE</button>
-                    </a>
+                    {% if user.is_staff == True %}
+                    <a href="/project/edit/{{ project.slug }}">UPDATE</a>
                     <a href="/project/delete/{{ project.slug }}">DELETE</a>
+                    {% else %}
+                    {% endif %}
                 {% endif %}
             </div>
             
             {% else %}
 
             {% endif %}
+        </div>
+        {% endfor %}
+
+    </div>
+
+    <div>
+        <div>
+            <h2>FINISHED PROJECTS</h2>
+            <p>Aspire Architecture is proud to showcase our completed projects...</p>
+        </div>
+
+        {% for project in projects %}
+        
+        <div>
+            {% if project.status == 2 and project.finished == True %} <!-- Show finished projects -->
+            <div>
+                {% if "placeholder" in project.featured_image.url %}
+                    <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="" width="300px">
+                    <h3>{{project.project_name}}</h3>
+                    <p>{{project.description}}</p>
+                    <button>></button>
+                    {% if user.is_staff == True %}
+                    <a href="/project/edit/{{ project.slug }}">UPDATE</a>
+                    <a href="/project/delete/{{ project.slug }}">DELETE</a>
+                    {% else %}
+                    {% endif %}
+                {% else %}
+                    <img src="{{ project.featured_image.url }}" width="300px" alt="" value="">
+                    <h3>{{project.project_name}}</h3>
+                    <p>{{project.description}}</p>
+                    <button>></button>
+                    {% if user.is_staff == True %}
+                    <a href="/project/edit/{{ project.slug }}">UPDATE</a>
+                    <a href="/project/delete/{{ project.slug }}">DELETE</a>
+                    {% else %}
+                    {% endif %}
+                {% endif %}
+            </div>
             
+            {% else %}
+
+            {% endif %}
         </div>
         {% endfor %}
 
