@@ -1,50 +1,64 @@
 <!-- HEADER -->
 
-<header id="header">
-    <div class="top-nav">
+<header id="header" class="">
+    <div class="">
 
         {% if user.is_staff == True %}
 
-        <div style="background-color: blue;">
+        <div style="background-color: rgb(123, 255, 0);">
             <p>Hi {{user}}, you're now logged in</p>
         </div>
 
         {% else %}
         {% endif %}
 
-        <div>
-            <p>info</p>
-            <div>
-                <a href="/"><img src="https://res.cloudinary.com/dys7tcjln/image/upload/v1681817225/Aspire_logo_WHITE_vye9ka.png" alt="Aspire Architecture logo" width="150px"></a>
+        <div class="container pb-3">
+            <!-- <div class="row align-items-end text-center">
+                <div class="col d-none d-lg-block">
+                    <p>info@aspirearchitecture.com</p>
+                </div> -->
+                <div class="col text-center">
+                    <a href="/"><img
+                            src="https://res.cloudinary.com/dys7tcjln/image/upload/v1681817225/Aspire_logo_WHITE_vye9ka.png"
+                            alt="Aspire Architecture logo" width="150px"></a>
+                </div>
+                <!-- <div class="col d-none d-lg-block">
+                    <p>socials</p>
+                </div> -->
             </div>
-            <p>socials</p>
         </div>
 
-        
-
-        <nav>
-            <ul class="">
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-                <li>
-                    <a href="#services">Services</a>
-                </li>
-                <li>
-                    <a href="#about">About</a>
-                </li>
-                <li>
-                    <a href="#">Studio</a>
-                </li>
-                <li>
-                    <a href="#">Press & Awards</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-        </nav>
-
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 container nav-justified fw-semibold">
+                  <li class="nav-item col">
+                    <a class="nav-link" aria-current="page" href="#projects">Projects</a>
+                  </li>
+                  <li class="nav-item col">
+                    <a class="nav-link" href="#services">Services</a>
+                  </li>
+                  <li class="nav-item col">
+                    <a class="nav-link" href="#about">About</a>
+                  </li>
+                  <li class="nav-item col">
+                    <a class="nav-link" href="#">Studio</a>
+                  </li>
+                  <li class="nav-item col">
+                    <a class="nav-link" href="#">Press & Awards</a>
+                  </li>
+                  <li class="nav-item col">
+                    <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
     </div>
 </header>
 
