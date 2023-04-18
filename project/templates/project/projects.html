@@ -6,6 +6,13 @@
             <h2>CURRENT PROJECTS</h2>
             <p>Get inspired and discover some of our current live projects happening right now as we speak...</p>
         </div>
+
+        <div>
+            {% if user.is_staff == True %}
+            <a href="/project/create">CREATE NEW PROJECT</a>
+            {% else %}
+            {% endif %}
+        </div>
         
         {% for project in projects %}
         
@@ -78,7 +85,6 @@
             </div>
             
             {% else %}
-
             {% endif %}
         </div>
         {% endfor %}
