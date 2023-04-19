@@ -1,5 +1,7 @@
 h1, h2, h3, h4 {
     text-transform: uppercase;
+    color: #001b33;
+    letter-spacing: 5px;
 }
 
 header {
@@ -12,7 +14,21 @@ nav {
 }
 
 #hero {
-    background-repeat: no-repeat;
-    background-size: auto;
-    background: url(https://res.cloudinary.com/dys7tcjln/image/upload/v1681820247/Architecture_xzaiof.jpg);
+    background: url(https://res.cloudinary.com/dys7tcjln/image/upload/v1681820247/Architecture_xzaiof.jpg) no-repeat;
+    width: 100%;
+    height: 20rem;
+    background-size: cover;
+}
+
+.project-title {
+    padding: 12px;
+    position: absolute;
+    margin: -30px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-primary {
+    background-color: #001b33;
+    stroke: #001b33;
+    border-radius: 0%;
 }
