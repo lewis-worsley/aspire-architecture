@@ -10,7 +10,7 @@
 
             <div class="text-center">
                 {% if user.is_staff == True %}
-                <button href="/project/create" class="btn btn-primary mb-5 mt-4">CREATE NEW PROJECT</button>
+                <a href="/project/create" class="btn btn-primary mb-5 mt-4">CREATE NEW PROJECT</a>
                 {% else %}
                 {% endif %}
             </div>
@@ -29,14 +29,14 @@
                         class="card-img">
                     <div class="card-body">
                         <p class="card-text">{{project.description}}</p>
-                        <button class="btn btn-primary" type="button">></button>
+                        <a class="btn btn-primary">></a>
                     </div>
                     {% if user.is_staff == True %}
                     <div class="card-body text-center">
-                        <button class="btn btn-secondary m-1" type="button"
-                            href="/project/edit/{{ project.slug }}">UPDATE</button>
-                        <button class="btn btn-danger m-1" type="button"
-                            href="/project/delete/{{ project.slug }}">DELETE</button>
+                        <a class="btn btn-secondary m-1"
+                            href="/project/edit/{{ project.slug }}">UPDATE</a>
+                        <a class="btn btn-danger m-1"
+                            href="/project/delete/{{ project.slug }}">DELETE</a>
                     </div>
                     {% endif %}
                     {% else %}
@@ -45,14 +45,14 @@
                     <img src="{{ project.featured_image.url }}" alt="" value="" class="card-img">
                     <div class="card-body">
                         <p class="card-text">{{project.description}}</p>
-                        <button class="btn btn-primary" type="button">></button>
+                        <a class="btn btn-primary">></a>
                     </div>
                     {% if user.is_staff == True %}
                     <div class="card-body text-center">
-                        <button class="btn btn-secondary m-1" type="button"
-                            href="/project/edit/{{ project.slug }}">UPDATE</button>
-                        <button class="btn btn-danger m-1" type="button"
-                            href="/project/delete/{{ project.slug }}">DELETE</button>
+                        <a class="btn btn-secondary m-1"
+                            href="/project/edit/{{ project.slug }}">UPDATE</a>
+                        <a class="btn btn-danger m-1"
+                            href="/project/delete/{{ project.slug }}">DELETE</a>
                     </div>
                     {% else %}
                     {% endif %}
@@ -89,14 +89,14 @@
                             class="card-img">
                         <div class="card-body">
                             <p class="card-text">{{project.description}}</p>
-                            <button class="btn btn-primary" type="button">></button>
+                            <a class="btn btn-primary">></a>
                         </div>
                         {% if user.is_staff == True %}
                         <div class="card-body text-center">
-                            <button class="btn btn-secondary m-1" type="button"
-                                href="/project/edit/{{ project.slug }}">UPDATE</button>
-                            <button class="btn btn-danger m-1" type="button"
-                                href="/project/delete/{{ project.slug }}">DELETE</button>
+                            <a class="btn btn-secondary m-1"
+                                href="/project/edit/{{ project.slug }}">UPDATE</a>
+                            <a class="btn btn-danger m-1"
+                                href="/project/delete/{{ project.slug }}">DELETE</a>
                         </div>
                         {% endif %}
                         {% else %}
@@ -105,14 +105,14 @@
                         <img src="{{ project.featured_image.url }}" alt="" value="" class="card-img">
                         <div class="card-body">
                             <p class="card-text">{{project.description}}</p>
-                            <button class="btn btn-primary" type="button">></button>
+                            <a class="btn btn-primary">></a>
                         </div>
                         {% if user.is_staff == True %}
                         <div class="card-body text-center">
-                            <button class="btn btn-secondary m-1" type="button"
-                                href="/project/edit/{{ project.slug }}">UPDATE</button>
-                            <button class="btn btn-danger m-1" type="button"
-                                href="/project/delete/{{ project.slug }}">DELETE</button>
+                            <a class="btn btn-secondary m-1"
+                                href="/project/edit/{{ project.slug }}">UPDATE</a>
+                            <a class="btn btn-danger m-1"
+                                href="/project/delete/{{ project.slug }}">DELETE</a>
                         </div>
                         {% else %}
                         {% endif %}
