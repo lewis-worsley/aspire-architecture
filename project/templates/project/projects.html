@@ -2,7 +2,7 @@
 
 <section id="projects" class="mb-4">
     <div class="container mt-5">
-        <div class="row pb-2">
+        <div class="pb-2">
             <div class="text-center">
                 <h2>CURRENT PROJECTS</h2>
                 <p>Get inspired and discover some of our current live projects happening right now as we speak...</p>
@@ -21,7 +21,7 @@
 
             {% if project.status == 2 and project.finished == False %}
             <!-- Show Published projects -->
-            <div class="col-sm-12 col-md-4 col-lg-3 my-4">
+            <div class="col-sm-12 col-md-4 my-4">
                 <div class="card h-100 mt-2">
                     {% if "placeholder" in project.featured_image.url %}
                     <h3 class="card-title project-title">{{project.project_name}}</h3>
@@ -75,13 +75,11 @@
                 <h2>FINISHED PROJECTS</h2>
                 <p>Aspire Architecture is proud to showcase our completed projects...</p>
             </div>
-
-            <div class="row mt-2">
                 {% for project in projects %}
 
                 {% if project.status == 2 and project.finished == True %}
                 <!-- Show finished projects -->
-                <div class="col-sm-12 col-md-4 col-lg-3 my-4">
+                <div class="col-sm-12 col-md-4 my-4">
                     <div class="card h-100 my-3">
                         {% if "placeholder" in project.featured_image.url %}
                         <h3 class="card-title project-title">{{project.project_name}}</h3>
@@ -124,7 +122,6 @@
                 {% endif %}
                 {% endfor %}
 
-            </div>
         </div>
 
     </div>

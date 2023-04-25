@@ -33,8 +33,17 @@ nav {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
+#contact {
+    background: url(https://res.cloudinary.com/dys7tcjln/image/upload/v1682243828/architecture-sketching_k7veaf.jpg) no-repeat;
+    background-size: cover;
+    background-color: rgba(0,27,51, 0.9);
+    background-blend-mode: overlay;
+    color: white;
+    background-position: right
+}
+
 .btn-primary {
-    background-color: #001b33;
+    background-color:#023c62
 }
 
 .btn {
@@ -73,10 +82,6 @@ nav {
     padding-left: 0%;
 }
 
-@media screen and (max-width: 991px) {
-
-    .align-text-to-center {
-        text-align: center;
-    }
-
+.heading-white {
+    color: white;
 }

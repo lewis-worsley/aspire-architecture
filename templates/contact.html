@@ -1,43 +1,54 @@
-<section>
+<section class="container py-5">
     <div>
-        <div>
-            <span>+44(0)20 8600 912X</span>
-            <span>studio@aspirearchitecture.co.uk</span>
+        <div class="text-center text-sm-end mb-4">
+            <a>+44(0)20 8600 912X</a><br>
+            <a>studio@aspirearchitecture.co.uk</a>
+        </div>
+        <div class="">
+            <h2 class="heading-white">Want to share your vision?</h2>
+            <p class="fs-4">Get in touch and find out how we can help you</p>
         </div>
 
-        <h2>Want to share your vision?</h2>
-        <p>Get in touch and find out how we can help you</p>
-
         <div>
-            <form method="post" enctype="multipart/form-data" action="https://formdump.codeinstitute.net/">
+            <form method="post" enctype="multipart/form-data" action="https://formdump.codeinstitute.net/" class="row"> 
                 {% csrf_token %}
-                <div>
-                    <div>
-                        <input type="text" name="name" id="name" placeholder="Name" required>
+                <div class="col-md-12 col-lg-4">
+                    <div class="mb-3">
+                        <label for="ControlInputName" class="form-label">Name</label>
+                        <input type="email" class="form-control" id="ControlInputName"
+                            required>
                     </div>
-                    <div>
-                        <input type="email" name="email" id="email" placeholder="Email" required>
+                    <div class="mb-3">
+                        <label for="ControlInputEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="ControlInputEmail" placeholder="name@example.com"
+                            required>
                     </div>
-                    <div>
-                        <input type="number" name="phone_number" id="phone_number" placeholder="Phone number" required>
-                    </div>
-                    <div>
-                        <input type="text" name="company_name" id="company_name" placeholder="Company (if applicable)">
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <textarea type="text" name="message" id="message" placeholder="Message (optional)" cols="30"
-                            rows="10"></textarea>
-                    </div>
-                    <div>
-                        <input type="file" name="attachments" id="attachments" placeholder="Attachments (if any)">
+                    <div class="mb-3">
+                        <label for="ControlInputNumber" class="form-label">Phone Number</label>
+                        <input type="number" class="form-control" id="ControlInputNumber"
+                            required>
                     </div>
                 </div>
-
-                <button type="submit">SUBMIT</button>
-
+                <div class="col-md-12 col-lg-8">
+                    <div class="mb-3">
+                        <label for="ControlTextarea1" class="form-label">Message</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" 
+                            style="min-height: 124px;" placeholder="Optional"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Attachments</label>
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-light">SUBMIT</button> 
+                     </div>
+                </div>
+                
+                
             </form>
         </div>
+
+
+
     </div>
 </section>

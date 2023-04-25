@@ -55,6 +55,7 @@ def edit_project(request, slug):
 
     return render(request, 'project/edit_project.html', context)
 
+
 def delete_project(request, slug):
     
     project = get_object_or_404(Project, slug=slug)
