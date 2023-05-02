@@ -1,59 +1,49 @@
 <!-- HEADER -->
-
 <header id="header" class="row no-gutters">
-  <div class="row">
-
-    {% if user.is_staff == True %}
-
-    <div style="background-color: rgb(123, 255, 0);" class="no-gutters">
-      <p>Hi {{user}}, you're now logged in</p>
-    </div>
-
-    {% else %}
-    {% endif %}
-
-    <div class="container p-3">
-
-      <div class="col text-center">
-        <a href="/"><img
-            src="https://res.cloudinary.com/dys7tcjln/image/upload/v1681817225/Aspire_logo_WHITE_vye9ka.png"
-            alt="Aspire Architecture logo" width="100px" class="img-fluid"></a>
+  <div>
+      {% if user.is_staff == True %}
+      <div style="background-color: rgb(123, 255, 0);" class="no-gutters">
+          <p>Hi {{user}}, you're now logged in</p>
       </div>
-
-    </div>
+      {% else %}
+      {% endif %}
+      <div class="container p-3">
+          <div class="col text-center">
+              <a href="/"><img
+                  src="https://res.cloudinary.com/dys7tcjln/image/upload/v1681817225/Aspire_logo_WHITE_vye9ka.png"
+                  alt="Aspire Architecture logo" width="100px" class="img-fluid"></a>
+          </div>
+      </div>
   </div>
-
-  <nav class="navbar navbar-expand-lg bg-body-tertiary d-none d-lg-block">
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 container nav-justified fw-semibold">
-          <li class="nav-item col">
-            <a class="nav-link" aria-current="page" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item col">
-            <a class="nav-link" href="#services">Services</a>
-          </li>
-          <li class="nav-item col">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item col">
-            <a class="nav-link" href="#">Studio</a>
-          </li>
-          <li class="nav-item col">
-            <a class="nav-link" href="#">Press & Awards</a>
-          </li>
-          <li class="nav-item col">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
+  <nav class="navbar navbar-expand-md bg-body-tertiary">
+      <div class="container justify-content-center">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 container nav-justified fw-semibold">
+                  <li class="nav-item col">
+                      <a class="nav-link" aria-current="page" href="projects">Projects</a>
+                  </li>
+                  <li class="nav-item col">
+                      <a class="nav-link" href="#services">Services</a>
+                  </li>
+                  <li class="nav-item col">
+                      <a class="nav-link" href="#about">About</a>
+                  </li>
+                  <li class="nav-item col">
+                      <a class="nav-link" href="#">Studio</a>
+                  </li>
+                  <li class="nav-item col">
+                      <a class="nav-link" href="#">Press</a>
+                  </li>
+                  <li class="nav-item col">
+                      <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+              </ul>
+          </div>
       </div>
-    </div>
   </nav>
   </div>
 </header>
-
 <!-- END HEADER -->

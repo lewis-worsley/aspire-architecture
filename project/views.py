@@ -11,11 +11,10 @@ def home_view(request):
 
     context = {}
 
-    projects = Project.objects.all()
-    context['projects'] = projects
+    context['listOne'] = Project.objects.filter(finished=False)[:3]
+    context['listTwo'] = Project.objects.filter(finished=True)[:3]
 
     return render(request, 'project/home.html', context)
-
 
 def create_project_view(request):
 

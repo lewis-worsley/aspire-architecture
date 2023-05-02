@@ -3,7 +3,6 @@ from django.db import models
 from cloudinary.models import CloudinaryField
 
 # Create your models here.
-STATUS = ((0, "Draft"), (1, "Pending Approval"), (2, "Published"))
 
 class Project(models.Model):
     project_name = models.CharField(max_length=30, unique=True)
@@ -14,7 +13,6 @@ class Project(models.Model):
     location = models.CharField(max_length=50)
     updated_on = models.DateTimeField(auto_now=True)
     created_on = models.DateTimeField(auto_now_add=True)
-    status = models.IntegerField(choices=STATUS, default=0)
     finished = models.BooleanField(default=False)
     tagline = models.CharField(max_length=50)
 

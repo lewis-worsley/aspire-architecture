@@ -17,9 +17,8 @@
         </div>
 
         <div class="row">
-            {% for project in projects %}
+            {% for project in listOne %}
 
-            {% if project.status == 2 and project.finished == False %}
             <!-- Show Published projects -->
             <div class="col-sm-12 col-md-4 my-4">
                 <div class="card h-100 mt-2">
@@ -59,10 +58,6 @@
                     {% endif %}
                 </div>
             </div>
-
-            {% else %}
-
-            {% endif %}
             {% endfor %}
         </div>
 
@@ -75,9 +70,8 @@
                 <h2>FINISHED PROJECTS</h2>
                 <p>Aspire Architecture is proud to showcase our completed projects...</p>
             </div>
-                {% for project in projects %}
+                {% for project in listTwo %}
 
-                {% if project.status == 2 and project.finished == True %}
                 <!-- Show finished projects -->
                 <div class="col-sm-12 col-md-4 my-4">
                     <div class="card h-100 my-3">
@@ -117,9 +111,6 @@
                         {% endif %}
                     </div>
                 </div>
-
-                {% else %}
-                {% endif %}
                 {% endfor %}
 
         </div>
