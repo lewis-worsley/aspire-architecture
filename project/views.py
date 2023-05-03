@@ -49,7 +49,8 @@ def edit_project(request, slug):
 
     form = UpdateProjectForm(instance=project)
     context = {
-        'form': form
+        'form': form,
+        'admin': True
     }
 
     return render(request, 'project/edit_project.html', context)
@@ -67,6 +68,3 @@ def delete_project(request, slug):
         project.delete()
         # messages.success(request, "Customise later")
         return redirect('home')
-
-
-    
