@@ -4,13 +4,10 @@ h1, h2, h3, h4 {
     letter-spacing: 5px;
 }
 
+/* header.html START */
+
 header {
     background-color: #023c62;
-}
-
-footer {
-    background-color: #605c5c;
-    color: white;
 }
 
 nav {
@@ -18,7 +15,20 @@ nav {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Hero Section START */
+/* header.html END */
+
+
+/* footer.html START */
+
+footer {
+    background-color: #605c5c;
+    color: white;
+}
+
+/* footer.html END */
+
+
+/* Hero Section (about.html) START */
 
 #hero {
     background: url(https://res.cloudinary.com/dys7tcjln/image/upload/v1681984348/Architecture-50_erryhb.jpg) no-repeat;
@@ -28,11 +38,18 @@ nav {
     background-size: cover;
 }
 
+#hero-heading-white {
+    color: white;
+}
+
 .hero-text-box {
     background-color: rgba(0, 27, 51, 0.8);
 }
 
-/* Hero Section END */
+/* Hero Section (about.html) END */
+
+
+/* project.html START */
 
 .project-title {
     padding: 12px;
@@ -40,6 +57,11 @@ nav {
     margin: -30px 0;
     background-color: rgba(255, 255, 255, 0.8);
 }
+
+/* project.html END */
+
+
+/* Contact START */
 
 #contact {
     background: url(https://res.cloudinary.com/dys7tcjln/image/upload/v1682243828/architecture-sketching_k7veaf.jpg) no-repeat;
@@ -49,6 +71,13 @@ nav {
     color: white;
     background-position: right
 }
+
+.heading-white {
+    color: white;
+}
+
+/* Contact END */
+
 
 /* Buttons START */
 
@@ -69,21 +98,26 @@ nav {
 /* Buttons END */
 
 
-
-.fa-square {
-    color: #001b33;
-    border-radius: 0%;
-}
-
+/* Bootstrap START */
 
 .card {
     box-shadow: 0px 5px 1px rgba(0, 27, 51, 1);
 }
 
+/* Bootstrap END */
+
+
+/* home.html */
+
 .cta {
     background-color: #023c62;
     color: white;
 }
+
+/* home.html */
+
+
+/* Font Awesome START */
 
 .fa-brands {
     color: white;
@@ -92,10 +126,9 @@ nav {
     padding-left: 0%;
 }
 
-.heading-white {
-    color: white;
+.fa-square {
+    color: #001b33;
+    border-radius: 0%;
 }
 
-#hero-heading-white {
-    color: white;
-}
+/* Font Awesome END */
