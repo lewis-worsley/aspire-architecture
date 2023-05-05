@@ -18,6 +18,8 @@ nav {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* Hero Section START */
+
 #hero {
     background: url(https://res.cloudinary.com/dys7tcjln/image/upload/v1681984348/Architecture-50_erryhb.jpg) no-repeat;
     width: 100%;
@@ -25,6 +27,12 @@ nav {
     height: 25vw;
     background-size: cover;
 }
+
+.hero-text-box {
+    background-color: rgba(0, 27, 51, 0.8);
+}
+
+/* Hero Section END */
 
 .project-title {
     padding: 12px;
@@ -42,6 +50,8 @@ nav {
     background-position: right
 }
 
+/* Buttons START */
+
 .btn-primary {
     background-color:#023c62
 }
@@ -56,9 +66,9 @@ nav {
     color: white;
 }
 
-.hero-text-box {
-    background-color: rgba(0, 27, 51, 0.8);
-}
+/* Buttons END */
+
+
 
 .fa-square {
     color: #001b33;
@@ -83,5 +93,9 @@ nav {
 }
 
 .heading-white {
+    color: white;
+}
+
+#hero-heading-white {
     color: white;
 }
