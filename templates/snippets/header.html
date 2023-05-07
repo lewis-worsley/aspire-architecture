@@ -1,22 +1,33 @@
-<!-- HEADER -->
-<header id="header" class="row no-gutters">
-    <div>
+<!-- HEADER START -->
+
+<header id="header" class="row">
+    <div class="staff-header py-2 container text-center">
         {% if user.is_staff == True %}
-        <div style="background-color: rgb(123, 255, 0);" class="no-gutters">
-            <p>Hi {{user}}, you're now logged in</p>
+        <div>
+            {% if request.path == "/" %}
+            <p class="d-flex align-items-center justify-content-evenly">Hi {{user}}, you're now logged in.
+                <a class="btn btn-link" href="admin">Content Management System Portal</a></p>
+            {% else %}
+            <p class="d-flex align-items-center justify-content-evenly">Hi {{user}}, you're now logged in.
+                <a class="btn btn-link" href="/admin">Content Management System Portal</a></p>
+            {% endif %}
         </div>
         {% else %}
         {% endif %}
-        <div class="container p-3">
+        
+    </div>
+    <div class="container p-3">
             <div class="col text-center">
                 <a href="/"><img
                         src="https://res.cloudinary.com/dys7tcjln/image/upload/v1681817225/Aspire_logo_WHITE_vye9ka.png"
                         alt="Aspire Architecture logo" width="100px" class="img-fluid"></a>
             </div>
         </div>
+    <div>
+
     </div>
     <nav class="navbar navbar-expand-md bg-body-tertiary">
-        <div class="container justify-content-center">
+        <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -68,5 +79,6 @@
         </div>
     </nav>
     </div>
+
 </header>
-<!-- END HEADER -->
+<!-- HEADER END -->
