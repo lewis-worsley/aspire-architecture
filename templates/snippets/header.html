@@ -1,21 +1,28 @@
-<!-- HEADER START -->
+<!-- Header START -->
 
 <header id="header" class="row">
+
     <div class="staff-header py-2 container text-center">
+
         {% if user.is_staff == True %}
-        <div>
-            {% if request.path == "/" %}
-            <span class="d-flex align-items-center justify-content-evenly">Hi {{user}}, you're now logged in.
-                <a class="btn btn-link" href="admin">Content Management System Portal</a></span>
+            <div class="d-flex align-items-center justify-content-evenly">
+
+                {% if request.path == "/" %}
+                    <span class="d-none d-sm-block">Hi {{user}}, you're now logged in.</span>
+                    <a class="btn btn-link btn-sm" href="admin">Admin Portal</a>
+
+                {% else %}
+                    <span class="d-none d-sm-block">Hi {{user}}, you're now logged in.</span>
+                    <a class="btn btn-link btn-sm" href="/admin">Admin Portal</a>
+
+                {% endif %}
+            </div>
+            
             {% else %}
-            <span class="d-flex align-items-center justify-content-evenly">Hi {{user}}, you're now logged in.
-                <a class="btn btn-link" href="/admin">Content Management System Portal</a></span>
             {% endif %}
-        </div>
-        {% else %}
-        {% endif %}
-        
+            
     </div>
+
     <div class="container p-3">
             <div class="col text-center">
                 <a href="/"><img
@@ -81,4 +88,4 @@
     </div>
 
 </header>
-<!-- HEADER END -->
+<!-- Header END -->
