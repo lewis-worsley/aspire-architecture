@@ -1,120 +1,133 @@
 {% block content %}
 
 <section id="projects" class="mb-5">
+
     <div class="container mt-5">
-        <div class="pb-2">
-            <div class="text-center">
+
+        <div class="pb-2 text-center">
+            <div>
                 <h2>CURRENT PROJECTS</h2>
                 <p>Get inspired and discover some of our current live projects happening right now as we speak...</p>
             </div>
 
-            <div class="text-center">
+            <div>
+                <!-- Not visible to public user. Only authorised users (staff with permissions) can view this -->
                 {% if user.is_staff == True %}
-                <a href="/project/create" class="btn btn-primary mb-5 mt-4">CREATE NEW PROJECT</a>
+                    <a href="/project/create" class="btn btn-primary mb-5 mt-4">CREATE NEW PROJECT</a>
+
                 {% else %}
                 {% endif %}
+
             </div>
         </div>
 
+        <!-- Show Current Projects -->
         <div class="row">
-            {% for project in listOne %}
+            
+            {% for project in listOne %} <!-- Queryset limited to show only three current projects at one time -->
+                <div class="col-sm-12 col-md-4 my-4">
+                    <div class="card h-100 mt-2">
 
-            <!-- Show Published projects -->
-            <div class="col-sm-12 col-md-4 my-4">
-                <div class="card h-100 mt-2">
-                    {% if "placeholder" in project.featured_image.url %}
-                    <h3 class="card-title project-title">{{project.project_name}}</h3>
-                    <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt=""
-                        class="card-img">
-                    <div class="card-body">
-                        <p class="card-text">{{project.description}}</p>
-                        <a class="btn btn-primary fw-semibold"><i class="fa-solid fa-caret-right fa-xl"></i></a>
-                    </div>
-                    {% if user.is_staff == True %}
-                    <div class="card-body text-center">
-                        <a class="btn btn-secondary m-1"
-                            href="/project/edit/{{ project.slug }}">UPDATE</a>
-                        <a class="btn btn-danger m-1"
-                            href="/project/delete/{{ project.slug }}">DELETE</a>
-                    </div>
-                    {% endif %}
-                    {% else %}
+                        {% if "placeholder" in project.featured_image.url %} <!-- If no image is uploaded by user, a placeholder image is inserted -->
+                            <h3 class="card-title project-title">{{project.project_name}}</h3>
+                            <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="" class="card-img">
+                            <div class="card-body">
+                                <p class="card-text">{{project.description}}</p>
+                                <a class="btn btn-primary fw-semibold"><i class="fa-solid fa-caret-right fa-xl"></i></a>
+                            </div>
 
-                    <h3 class="card-title project-title">{{project.project_name}}</h3>
-                    <img src="{{ project.featured_image.url }}" alt="" value="" class="card-img">
-                    <div class="card-body">
-                        <p class="card-text">{{project.description}}</p>
-                        <a class="btn btn-primary fw-semibold"><i class="fa-solid fa-caret-right fa-xl"></i></a>
+                        <!-- Not visible to public user. Only authorised users (staff with permissions) can view this -->
+                        {% if user.is_staff == True %}
+                            <div class="card-body text-center">
+                                <a class="btn btn-secondary m-1" href="/project/edit/{{ project.slug }}">UPDATE</a>
+                                <a class="btn btn-danger m-1" href="/project/delete/{{ project.slug }}">DELETE</a>
+                            </div>
+
+                        {% endif %}
+                        {% else %}
+                            <h3 class="card-title project-title">{{project.project_name}}</h3>
+                            <img src="{{ project.featured_image.url }}" alt="" class="card-img">
+                            <div class="card-body">
+                                <p class="card-text">{{project.description}}</p>
+                                <a class="btn btn-primary fw-semibold"><i class="fa-solid fa-caret-right fa-xl"></i></a>
+                            </div>
+
+                        <!-- Not visible to public user. Only authorised users (staff with permissions) can view this -->
+                        {% if user.is_staff == True %}
+                            <div class="card-body text-center">
+                                <a class="btn btn-secondary m-1" href="/project/edit/{{ project.slug }}">UPDATE</a>
+                                <a class="btn btn-danger m-1" href="/project/delete/{{ project.slug }}">DELETE</a>
+                            </div>
+
+                        {% else %}
+                        {% endif %}
+                        {% endif %}
+
                     </div>
-                    {% if user.is_staff == True %}
-                    <div class="card-body text-center">
-                        <a class="btn btn-secondary m-1"
-                            href="/project/edit/{{ project.slug }}">UPDATE</a>
-                        <a class="btn btn-danger m-1"
-                            href="/project/delete/{{ project.slug }}">DELETE</a>
-                    </div>
-                    {% else %}
-                    {% endif %}
-                    {% endif %}
                 </div>
-            </div>
             {% endfor %}
+
         </div>
 
     </div>
 
     <div class="container mt-5">
 
-        <div class="row pb-2">
-            <div class="text-center">
+        <div class="pb-2 text-center">
                 <h2>FINISHED PROJECTS</h2>
                 <p>Aspire Architecture is proud to showcase our completed projects...</p>
-            </div>
-                {% for project in listTwo %}
+        </div>
+        
+        <!-- Show Finished rojects -->
+        <div class="row">
 
-                <!-- Show finished projects -->
+            {% for project in listTwo %} <!-- Queryset limited to show only three finished projects at one time -->
                 <div class="col-sm-12 col-md-4 my-4">
                     <div class="card h-100 my-3">
-                        {% if "placeholder" in project.featured_image.url %}
-                        <h3 class="card-title project-title">{{project.project_name}}</h3>
-                        <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt=""
-                            class="card-img">
-                        <div class="card-body">
-                            <p class="card-text">{{project.description}}</p>
-                            <a class="btn btn-primary fw-semibold"><i class="fa-solid fa-caret-right fa-xl"></i></a>
-                        </div>
+                        
+                        {% if "placeholder" in project.featured_image.url %} <!-- If no image is uploaded by user, a placeholder image is inserted -->
+                            <h3 class="card-title project-title">{{project.project_name}}</h3>
+                            <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="" class="card-img">
+                            <div class="card-body">
+                                <p class="card-text">{{project.description}}</p>
+                                <a class="btn btn-primary fw-semibold"><i class="fa-solid fa-caret-right fa-xl"></i></a>
+                            </div>
+                        
+                        <!-- Not visible to public user. Only authorised users (staff with permissions) can view this -->
                         {% if user.is_staff == True %}
-                        <div class="card-body text-center">
-                            <a class="btn btn-secondary m-1"
-                                href="/project/edit/{{ project.slug }}">UPDATE</a>
-                            <a class="btn btn-danger m-1"
-                                href="/project/delete/{{ project.slug }}">DELETE</a>
-                        </div>
-                        {% endif %}
-                        {% else %}
+                            <div class="card-body text-center">
+                                <a class="btn btn-secondary m-1" href="/project/edit/{{ project.slug }}">UPDATE</a>
+                                <a class="btn btn-danger m-1" href="/project/delete/{{ project.slug }}">DELETE</a>
+                            </div>
 
-                        <h3 class="card-title project-title">{{project.project_name}}</h3>
-                        <img src="{{ project.featured_image.url }}" alt="" value="" class="card-img">
-                        <div class="card-body">
-                            <p class="card-text">{{project.description}}</p>
-                            <a class="btn btn-primary fw-semibold"><i class="fa-solid fa-caret-right fa-xl"></i></a>
-                        </div>
+                        {% endif %}
+                        {% else %}
+                            <h3 class="card-title project-title">{{project.project_name}}</h3>
+                            <img src="{{ project.featured_image.url }}" alt="" class="card-img">
+                            <div class="card-body">
+                                <p class="card-text">{{project.description}}</p>
+                                <a class="btn btn-primary fw-semibold"><i class="fa-solid fa-caret-right fa-xl"></i></a>
+                            </div>
+                            
+                        <!-- Not visible to public user. Only authorised users (staff with permissions) can view this -->
                         {% if user.is_staff == True %}
-                        <div class="card-body text-center">
-                            <a class="btn btn-secondary m-1"
-                                href="/project/edit/{{ project.slug }}">UPDATE</a>
-                            <a class="btn btn-danger m-1"
-                                href="/project/delete/{{ project.slug }}">DELETE</a>
-                        </div>
+                            <div class="card-body text-center">
+                                <a class="btn btn-secondary m-1" href="/project/edit/{{ project.slug }}">UPDATE</a>
+                                <a class="btn btn-danger m-1" href="/project/delete/{{ project.slug }}">DELETE</a>
+                            </div>
+
                         {% else %}
                         {% endif %}
                         {% endif %}
+
                     </div>
                 </div>
-                {% endfor %}
+            {% endfor %}
 
         </div>
 
     </div>
+
 </section>
+
 {% endblock content %}
