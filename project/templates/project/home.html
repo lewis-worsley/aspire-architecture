@@ -2,38 +2,41 @@
 
 {% block content %}
 
+<!-- source: about.html -->
 <div id="about">
     {% include 'about.html' %}
 </div>
 
+<!-- source: stats.html -->
 <div>
     {% include 'stats.html' %}
 </div>
 
+<!-- source: services.html -->
 <div id="services">
     {% include 'services.html' %}
 </div>
 
-<div class="p-4 cta">
-    <div class="container text-center">
-        <div class="row align-items-center row-col-auto">
-            <div class="col-12">
-                <h4 class="heading-white">READY TO BRING YOUR IDEA TO LIFE?</h4>
-                <p>Get inspired by Aspire and find out how we can help you...</p>
-            </div>
-            <div class="col-12">
-                <a href="#" class="btn btn-outline-light fw-semibold px-5">I'M READY!</a>
-            </div>
+<!-- Call To Action START -->
+<div class="p-4 cta text-center">
+    <div class="row align-items-center row-col-auto">
+        <div class="col-12">
+            <h4 class="heading-white">READY TO BRING YOUR IDEA TO LIFE?</h4>
+            <p>Get inspired by Aspire and find out how we can help you...</p>
+        </div>
+        <div class="col-12">
+            <a href="#" class="btn btn-outline-light fw-semibold px-5">I'M READY!</a>
         </div>
     </div>
 </div>
+<!-- Call To Action END -->
 
-</div>
-
+<!-- source: projects.html -->
 <div id="projects">
     {% include 'project/projects.html' %}
 </div>
 
+<!-- source: contact.html -->
 <div id="contact">
     {% include 'contact.html' %}
 </div>
