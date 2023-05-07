@@ -5,11 +5,11 @@
         {% if user.is_staff == True %}
         <div>
             {% if request.path == "/" %}
-            <p class="d-flex align-items-center justify-content-evenly">Hi {{user}}, you're now logged in.
-                <a class="btn btn-link" href="admin">Content Management System Portal</a></p>
+            <span class="d-flex align-items-center justify-content-evenly">Hi {{user}}, you're now logged in.
+                <a class="btn btn-link" href="admin">Content Management System Portal</a></span>
             {% else %}
-            <p class="d-flex align-items-center justify-content-evenly">Hi {{user}}, you're now logged in.
-                <a class="btn btn-link" href="/admin">Content Management System Portal</a></p>
+            <span class="d-flex align-items-center justify-content-evenly">Hi {{user}}, you're now logged in.
+                <a class="btn btn-link" href="/admin">Content Management System Portal</a></span>
             {% endif %}
         </div>
         {% else %}
