@@ -19,10 +19,6 @@ nav {
     margin: 0
 }
 
-@media screen and (max-width: 576px) {
-    
-}
-
 .staff-header {
     background-color: #001b33;
     color: white;
