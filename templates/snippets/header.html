@@ -2,8 +2,9 @@
 
 <header id="header" class="row">
 
-    <div class="staff-header py-2 container text-center">
+    <div class="staff-header container text-center">
 
+        <!-- Not visible to public user. Only authorised users (staff with permissions) can view this -->
         {% if user.is_staff == True %}
             <div class="d-flex align-items-center justify-content-evenly">
 
@@ -16,71 +17,73 @@
                     <a class="btn btn-link btn-sm" href="/admin">Admin Portal</a>
 
                 {% endif %}
+
             </div>
             
-            {% else %}
-            {% endif %}
+        {% else %}
+        {% endif %}
             
     </div>
 
     <div class="container p-3">
-            <div class="col text-center">
-                <a href="/"><img
-                        src="https://res.cloudinary.com/dys7tcjln/image/upload/v1681817225/Aspire_logo_WHITE_vye9ka.png"
-                        alt="Aspire Architecture logo" width="100px" class="img-fluid"></a>
-            </div>
+        <div class="col text-center">
+            <a href="/"><img
+                    src="https://res.cloudinary.com/dys7tcjln/image/upload/v1681817225/Aspire_logo_WHITE_vye9ka.png"
+                    alt="Aspire Architecture logo" width="100px" class="img-fluid"></a>
         </div>
-    <div>
-
     </div>
-    <nav class="navbar navbar-expand-md bg-body-tertiary">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+
+    <nav class="navbar navbar-expand-sm bg-body-tertiary">
+        <div class="container d-flex justify-content-center">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 container nav-justified fw-semibold">
+                <ul class="navbar-nav container nav-justified fw-semibold">
+
                     {% if request.path == "/" %}
-                    <li class="nav-item col">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item col">
-                        <a class="nav-link" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item col">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item col">
-                        <a class="nav-link" href="#">Studio</a>
-                    </li>
-                    <li class="nav-item col">
-                        <a class="nav-link" href="#">Press</a>
-                    </li>
-                    <li class="nav-item col">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+                        <li class="nav-item col">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link" href="#">Studio</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link" href="#">Press</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+
                     {% else %}
-                    <li class="nav-item col">
-                        <a class="nav-link" href="/#projects">Projects</a>
-                    </li>
-                    <li class="nav-item col">
-                        <a class="nav-link" href="/#services">Services</a>
-                    </li>
-                    <li class="nav-item col">
-                        <a class="nav-link" href="/#about">About</a>
-                    </li>
-                    <li class="nav-item col">
-                        <a class="nav-link" href="#">Studio</a>
-                    </li>
-                    <li class="nav-item col">
-                        <a class="nav-link" href="#">Press</a>
-                    </li>
-                    <li class="nav-item col">
-                        <a class="nav-link" href="/#contact">Contact</a>
-                    </li>
+                        <li class="nav-item col">
+                            <a class="nav-link" href="/#projects">Projects</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link" href="/#services">Services</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link" href="/#about">About</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link" href="#">Studio</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link" href="#">Press</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link" href="/#contact">Contact</a>
+                        </li>
+                        
                     {% endif %}
+
                 </ul>
             </div>
         </div>
