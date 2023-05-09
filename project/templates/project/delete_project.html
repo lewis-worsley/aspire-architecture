@@ -2,28 +2,30 @@
 
 {% block content %}
 
-{% if user.is_staff == True %}
-
 <div class="container my-5">
 
-  <h1>Delete Project: {{ project.project_name }}</h1>
+    <!-- Not visible to public user. Only authorised users (staff with permissions) can view this -->
+    {% if user.is_staff == True %}
+        <h1 class="mb-5">Delete Project: {{ project.project_name }}</h1>
 
-  <div>
-    <form method="POST" enctype="multipart/form-data">{% csrf_token %}
+            <form method="POST" enctype="multipart/form-data">{% csrf_token %}
 
-      <p>Are you sure you want to delete the project "{{project.project_name}}"?</p>
-      <button type="submit" class="btn btn-danger mb-3">DELETE</button>
-    </form>
-  </div>
+                <p>Are you sure you want to delete the project "{{project.project_name}}"?</p>
+                <button type="submit" class="btn btn-danger mb-3">DELETE</button>
+                
+            </form>
 
-  <a href="{% url 'home' %}" class="btn btn-outline-primary">CANCEL</a>
+        <a href="/#projects" class="btn btn-outline-primary">CANCEL</a>
 
-  {% else %}
-  <div class="container my-5">
-    <h1>Unauthorised permission</h1>
-    <p>Sorry, you're not permitted to enter this page. Please return to the <a href="/">homepage</a>.</p>
-  </div>
-  {% endif %}
+    <!-- Unauthorised users on the page will see the following message below -->
+    {% else %}
+        <div class="container my-5">
+            <h1>Unauthorised permission</h1>
+            <p>Sorry, you're not permitted to enter this page. Please return to the <a href="/">homepage</a>.</p>
+        </div>
+
+    {% endif %}
 
 </div>
+
 {% endblock content %}

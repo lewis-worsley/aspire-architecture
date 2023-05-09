@@ -2,66 +2,78 @@
 
 {% block content %}
 
-{% if user.is_staff == True %}
-
 <div class="container my-5">
 
-    <div>
+    <!-- Not visible to public user. Only authorised users (staff with permissions) can view this -->
+    {% if user.is_staff == True %}
         <h1 class="mb-5">EDIT PROJECT: {{ form.initial.project_name }}</h1>
-    </div>
 
-    <form method="post" enctype="multipart/form-data">{% csrf_token %}
+        <form method="post" enctype="multipart/form-data">{% csrf_token %}
 
-        <div class="mb-3">
-            <label for="id_project_name" class="form-label">Project name</label>
-            <input type="text" class="form-control" name="project_name" id="id_project_name" placeholder="Project name"
-                value="{{form.initial.project_name}}" required autofocus>
-        </div>
-        <div class="mb-3">
-            <label for="id_descripion" class="form-label">Description</label>
-            <textarea type="text" class="form-control" name="description" id="id_descripion" placeholder="Description"
-                cols="30" rows="10" required>{{form.initial.description}}</textarea>
-        </div>
-        <div class="mb-3">
-            <label for="id_image" class="form-label">Image</label>
-            <input type="file" class="form-control" name="featured_image" id="id_image" accept=".jpg"
-                value="{{form.initial.featured_image}}">
-        </div>
-        <div class="mb-3">
-            <label for="id_client_name" class="form-label">Client</label>
-            <input type="text" class="form-control" name="client_name" id="id_client_name" placeholder="Client"
-                value="{{form.initial.client_name}}" required>
-        </div>
-        <div class="mb-3">
-            <label for="id_location" class="form-label">Location</label>
-            <input type="text" class="form-control" name="location" id="id_location" placeholder="Location"
-                value="{{form.initial.location}}" required>
-        </div>
-        <div class="mb-3 form-check">
-            <label for="id_finished" class="form-check-label">Finished</label>
-            <input type="checkbox" {% if form.initial.finished == True %}checked{% endif %} class="form-check-input" name="finished" id="id_finished" placeholder="Finished">
-        </div>
-        <div class="mb-3">
-            <label for="id_tagline" class="form-label">Tagline</label>
-            <input type="text" class="form-control" name="tagline" id="id_tagline" placeholder="Tagline"
-                value="{{form.initial.tagline}}" required>
+            <!-- Project Name -->
+            <div class="mb-3">
+                <label for="id_project_name" class="form-label">Project name</label>
+                <input type="text" class="form-control" name="project_name" id="id_project_name" placeholder="Project name"
+                    value="{{form.initial.project_name}}" required autofocus>
+            </div>
+
+            <!-- Description -->
+            <div class="mb-3">
+                <label for="id_descripion" class="form-label">Description</label>
+                <textarea type="text" class="form-control" name="description" id="id_descripion" placeholder="Description"
+                    cols="30" rows="10" required>{{form.initial.description}}</textarea>
+            </div>
+
+            <!-- Image -->
+            <div class="mb-3">
+                <label for="id_image" class="form-label">Image</label>
+                <input type="file" class="form-control" name="featured_image" id="id_image" accept=".jpg"
+                    value="{{form.initial.featured_image}}">
+            </div>
+
+            <!-- Client -->
+            <div class="mb-3">
+                <label for="id_client_name" class="form-label">Client</label>
+                <input type="text" class="form-control" name="client_name" id="id_client_name" placeholder="Client"
+                    value="{{form.initial.client_name}}" required>
+            </div>
+
+            <!-- Location -->
+            <div class="mb-3">
+                <label for="id_location" class="form-label">Location</label>
+                <input type="text" class="form-control" name="location" id="id_location" placeholder="Location"
+                    value="{{form.initial.location}}" required>
+            </div>
+
+            <!-- Finished -->
+            <div class="mb-3 form-check">
+                <label for="id_finished" class="form-check-label">Finished</label>
+                <input type="checkbox" {% if form.initial.finished == True %}checked{% endif %} class="form-check-input"
+                    name="finished" id="id_finished" placeholder="Finished">
+            </div>
+
+            <!-- Tagline -->
+            <div class="mb-3">
+                <label for="id_tagline" class="form-label">Tagline</label>
+                <input type="text" class="form-control" name="tagline" id="id_tagline" placeholder="Tagline"
+                    value="{{form.initial.tagline}}" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary mb-3">UPDATE</button>
+
+        </form>
+
+        <a href="/#projects" class="btn btn-outline-primary">CANCEL</a>
+
+    <!-- Unauthorised users on the page will see the following message below -->
+    {% else %}
+        <div class="my-5">
+            <h1>Unauthorised permission</h1>
+            <p>Sorry, you're not permitted to enter this page. Please return to the <a href="/">homepage</a>.</p>
         </div>
 
-        <button type="submit" class="btn btn-primary mb-3">UPDATE</button>
-
-    </form>
-
-    <div>
-        <a href="{% url 'home' %}" class="btn btn-outline-primary">CANCEL</a>
-    </div>
+    {% endif %}
 
 </div>
-
-{% else %}
-<div class="container my-5">
-    <h1>Unauthorised permission</h1>
-    <p>Sorry, you're not permitted to enter this page. Please return to the <a href="/">homepage</a>.</p>
-</div>
-{% endif %}
 
 {% endblock content %}
