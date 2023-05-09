@@ -1,54 +1,63 @@
 <section class="container py-5">
-    <div>
-        <div class="text-center text-sm-end mb-4">
-            <a>+44(0)20 8600 912X</a><br>
-            <a>studio@aspirearchitecture.co.uk</a>
-        </div>
-        <div class="">
-            <h2 class="heading-white">Want to share your vision?</h2>
-            <p class="fs-4">Get in touch and find out how we can help you</p>
-        </div>
 
-        <div>
-            <form method="post" enctype="multipart/form-data" action="https://formdump.codeinstitute.net/" class="row"> 
-                {% csrf_token %}
-                <div class="col-md-12 col-lg-4">
-                    <div class="mb-3">
-                        <label for="ControlInputName" class="form-label">Name</label>
-                        <input type="email" class="form-control" id="ControlInputName"
-                            required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="ControlInputEmail" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="ControlInputEmail" placeholder="name@example.com"
-                            required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="ControlInputNumber" class="form-label">Phone Number</label>
-                        <input type="number" class="form-control" id="ControlInputNumber"
-                            required>
-                    </div>
-                </div>
-                <div class="col-md-12 col-lg-8">
-                    <div class="mb-3">
-                        <label for="ControlTextarea1" class="form-label">Message</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" 
-                            style="min-height: 124px; max-height: 124px;" placeholder="Optional"></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label for="formFile" class="form-label">Attachments</label>
-                        <input class="form-control" type="file" id="formFile">
-                    </div>
-                    <div>
-                        <button type="submit" class="btn btn-light">SUBMIT</button> 
-                     </div>
-                </div>
-                
-                
-            </form>
-        </div>
-
-
-
+    <!-- Info displayed top right from small screen and upwards  -->
+    <div class="text-center text-sm-end mb-4">
+        <a>+44(0)20 8600 912X</a><br>
+        <a>studio@aspirearchitecture.com</a>
     </div>
+
+    <!-- Main header for form -->
+    <h2 class="heading-white">Want to share your vision?</h2>
+    <p class="fs-4">Get in touch and find out how we can help you</p>
+
+    <div>
+        <form method="post" enctype="multipart/form-data" action="https://formdump.codeinstitute.net/" class="row">{% csrf_token %}
+
+            <!-- Left column on lg screens and higher -->
+            <div class="col-md-12 col-lg-4">
+
+                <!-- Name -->
+                <div class="mb-3">
+                    <label for="ControlInputName" class="form-label">Name</label>
+                    <input type="email" class="form-control" id="ControlInputName" required>
+                </div>
+
+                <!-- Email address -->
+                <div class="mb-3">
+                    <label for="ControlInputEmail" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="ControlInputEmail" placeholder="name@example.com"
+                        required>
+                </div>
+
+                <!-- Phone number -->
+                <div class="mb-3">
+                    <label for="ControlInputNumber" class="form-label">Phone Number</label>
+                    <input type="number" class="form-control" id="ControlInputNumber" required>
+                </div>
+
+            </div>
+
+            <!-- Right column on lg screens and higher -->
+            <div class="col-md-12 col-lg-8">
+
+                <!-- Message -->
+                <div class="mb-3">
+                    <label for="ControlTextarea1" class="form-label">Message</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                        style="min-height: 124px; max-height: 124px;" placeholder="Optional"></textarea>
+                </div>
+
+                <!-- Attachments -->
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Attachments</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+
+                <button type="submit" class="btn btn-light">SUBMIT</button>
+
+            </div>
+
+        </form>
+    </div>
+
 </section>
