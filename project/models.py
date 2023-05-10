@@ -1,8 +1,8 @@
 from django.db import models
 
+# Project images are stored in the cloud via Cloudinary.com
 from cloudinary.models import CloudinaryField
 
-# Create your models here.
 
 class Project(models.Model):
     project_name = models.CharField(max_length=30, unique=True)
