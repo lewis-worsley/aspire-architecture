@@ -31,7 +31,8 @@
 
                         {% if "placeholder" in project.featured_image.url %} <!-- If no image is uploaded by user, a placeholder image is inserted -->
                             <h3 class="card-title project-title">{{project.project_name}}</h3>
-                            <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="" class="card-img">
+                            <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg"
+                            alt="A decorative (placeholder) image" class="card-img">
                             <div class="card-body">
                                 <p class="card-text">{{project.description}}</p>
                                 <a class="btn btn-primary fw-semibold"><i class="fa-solid fa-caret-right fa-xl"></i></a>
@@ -47,7 +48,7 @@
                         {% endif %}
                         {% else %}
                             <h3 class="card-title project-title">{{project.project_name}}</h3>
-                            <img src="{{ project.featured_image.url }}" alt="" class="card-img">
+                            <img src="{{ project.featured_image.url }}" alt="{{ project.alt_image }}" class="card-img">
                             <div class="card-body">
                                 <p class="card-text">{{project.description}}</p>
                                 <a class="btn btn-primary fw-semibold"><i class="fa-solid fa-caret-right fa-xl"></i></a>
@@ -89,7 +90,8 @@
                         
                         {% if "placeholder" in project.featured_image.url %} <!-- If no image is uploaded by user, a placeholder image is inserted -->
                             <h3 class="card-title project-title">{{project.project_name}}</h3>
-                            <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="" class="card-img">
+                            <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" 
+                            alt="A decorative (placeholder) image" class="card-img">
                             <div class="card-body">
                                 <p class="card-text">{{project.description}}</p>
                                 <a class="btn btn-primary fw-semibold"><i class="fa-solid fa-caret-right fa-xl"></i></a>
@@ -105,7 +107,7 @@
                         {% endif %}
                         {% else %}
                             <h3 class="card-title project-title">{{project.project_name}}</h3>
-                            <img src="{{ project.featured_image.url }}" alt="" class="card-img">
+                            <img src="{{ project.featured_image.url }}" alt="{{ project.alt_image }}" class="card-img">
                             <div class="card-body">
                                 <p class="card-text">{{project.description}}</p>
                                 <a class="btn btn-primary fw-semibold"><i class="fa-solid fa-caret-right fa-xl"></i></a>

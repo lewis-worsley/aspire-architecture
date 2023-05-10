@@ -10,7 +10,8 @@ class ProjectForm(forms.ModelForm):
             'project_name', 
             'description',
             'featured_image',
-            'client_name', 
+            'client_name',
+            'alt_image',
             'location',
             'finished',
             'tagline'
@@ -25,6 +26,7 @@ class UpdateProjectForm(forms.ModelForm):
             'description',
             'featured_image',
             'client_name', 
+            'alt_image',
             'location',
             'finished',
             'tagline'

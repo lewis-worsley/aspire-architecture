@@ -9,6 +9,7 @@ class Project(models.Model):
     slug = models.SlugField(unique=True, null=False)
     description = models.TextField()
     featured_image = CloudinaryField('image', default='placeholder')
+    alt_image = models.CharField(max_length=300, null=False)
     client_name = models.CharField(max_length=30)
     location = models.CharField(max_length=50)
     updated_on = models.DateTimeField(auto_now=True)
