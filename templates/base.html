@@ -25,13 +25,16 @@
     <div class="container-fluid g-0">
 
         <!-- Header (logo and navbar) a permanent view across the website -->
-        <div>
-            {% include 'snippets/header.html' %}
-        </div>
+
+        {% include 'snippets/header.html' %}
 
         {% if messages %}
             {% for message in messages %}
-                {{ message }}
+
+                    <div class="container mt-5">
+                        {{ message }}
+                    </div>
+                
             {% endfor %}
         {% endif %}
         
@@ -39,10 +42,9 @@
         {% endblock content %}
 
         <!-- Footer (logo and navbar) a permanent view across the website -->
-        <div>
-            {% include 'snippets/footer.html' %}
-        </div>
-        
+
+        {% include 'snippets/footer.html' %}
+
     </div>
 
     <!-- Bootstrap script -->

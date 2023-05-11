@@ -13,10 +13,9 @@ def login_staff_user(request):
             login(request, user)
             return redirect('home')
         else:
-            messages.success(request, "Error occured. Login details incorrect")
+            messages.info(request, "Error occured. Login details incorrect.")
             return redirect('login')
     
     else:
             # Return an 'invalid login' error message.
         return render(request, 'staff/login.html', {})
-
