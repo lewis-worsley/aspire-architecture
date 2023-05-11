@@ -11,11 +11,11 @@ def login_staff_user(request):
 
         if user is not None:
             login(request, user)
+            messages.success(request, "Login successful!")
             return redirect('home')
         else:
-            messages.info(request, "Error occured. Login details incorrect.")
+            messages.warning(request, "Error occured. Login details incorrect. Invalid username or password")
             return redirect('login')
-    
+
     else:
-            # Return an 'invalid login' error message.
         return render(request, 'staff/login.html', {})
