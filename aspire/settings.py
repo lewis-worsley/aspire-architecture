@@ -51,6 +51,7 @@ INSTALLED_APPS = [
 
     # My Apps
     'project',
+    'staff',
 ]
 
 MIDDLEWARE = [

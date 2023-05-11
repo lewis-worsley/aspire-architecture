@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Project images are stored in the cloud via Cloudinary.com
 from cloudinary.models import CloudinaryField
