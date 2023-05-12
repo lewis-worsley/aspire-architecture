@@ -19,3 +19,10 @@ def login_staff_user(request):
 
     else:
         return render(request, 'staff/login.html', {})
+
+
+def logout_staff_user(request):
+    logout(request)
+    messages.success(request, "You're now logged out!")
+    return redirect('home')
+
