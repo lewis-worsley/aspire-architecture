@@ -51,9 +51,18 @@
                 </p>
             </div>
 
-            <div>
-                <a href="{% url 'login' %}">Employee login</a>
-            </div>
+            {% if user.is_staff == False %}
+                <div>
+                    <a href="{% url 'login' %}" class="btn-link fw-lighter fs-6">Employee login</a>
+                </div>
+            
+            {% else %}
+                <div>
+                    <a href="{% url 'logout' %}" class="btn-link fw-lighter fs-6">Logout</a>
+                </div>
+            
+            {% endif %}
+
         </div>
 
     </div>
