@@ -29,7 +29,7 @@ def create_project_view(request):
             item = form.save(commit=False)
             item.slug = slugify(item.project_name)
             item.save()
-            return redirect('/')
+            return redirect('/#projects')
 
     form = ProjectForm()
     context = {
@@ -52,7 +52,7 @@ def edit_project(request, slug):
             item = form.save(commit=False)
             item.slug = slugify(item.project_name)
             item.save()
-            return redirect('/')
+            return redirect('/#projects')
 
     form = UpdateProjectForm(instance=project)
     context = {
@@ -75,5 +75,4 @@ def delete_project(request, slug):
 
     elif request.method == "POST":
         project.delete()
-        # messages.success(request, "Customise later")
-        return redirect('home')
+        return redirect('/#projects')
