@@ -6,6 +6,12 @@ from django.contrib import messages
 
 
 def login_staff_user(request):
+
+    user = request.user
+
+    if user.is_staff:
+        return redirect('home')
+
     if request.method == "POST":
         username = request.POST['username']
         password = request.POST['password']
