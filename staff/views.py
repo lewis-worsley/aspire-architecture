@@ -25,3 +25,7 @@ def logout_staff_user(request):
     logout(request)
     messages.success(request, "You're now logged out!")
     return redirect('home')
+
+
+def register_staff_user(request):
+    return render(request, 'staff/register.html', {})

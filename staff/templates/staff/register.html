@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container my-5">
+    <h1 class="mb-5">Register</h1>
+
+    <form method="POST" enctype="multipart/form-data" class="mb-5">{% csrf_token %}
+
+        <p class="fs-4"><strong>Please enter your staff login details</strong></p>
+
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" name="username" id="username" aria-describedby="emailHelp">
+        </div>
+
+        <div class="mb-3">
+            <label for="firstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" name="first_name" id="firstName">
+        </div>
+
+        <div class="mb-3">
+            <label for="LastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" name="last_name" id="LastName">
+        </div>
+
+        <div class="mb-3">
+            <label for="workPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" id="workPassword">
+        </div>
+
+        <div class="mb-3">
+            <label for="workPassword2" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" id="workPassword2">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Register for an account</button>
+
+    </form>
+
+    <a href="" class="btn btn-outline-secondary btn-sm">Don't have an account? Register to request access</a>
+
+</div>
+
+{% endblock content %}
