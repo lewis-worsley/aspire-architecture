@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
+from .forms import RegisterStaffUserForm
 from django.contrib import messages
 
 
@@ -30,20 +31,16 @@ def logout_staff_user(request):
 
 def register_staff_user(request):
     if request.method == "POST":
-        form = UserCreationForm()(request.POST)
+        form = RegisterStaffUserForm(request.POST)
         if form.is_valid():
             form.save()
             username = form.cleaned_data['username']
-            first_name = form.cleaned_data['first_name']
-            last_name = form.cleaned_data['last_name']
-            email = form.cleaned_data['email']
-            password = form.cleaned_data['password']
+            password = form.cleaned_data['password1']
             user = authenticate(username=username, password=password)
-            login(request, user)
-            messages.success(request, "Account registered")
+            messages.info(request, "Your account is pending approval. Admin has been notified of your request.")
             return redirect('home')
     else:
-        form = UserCreationForm()
+        form = RegisterStaffUserForm()
     return render(request, 'staff/register.html', {
         'form': form
     })
