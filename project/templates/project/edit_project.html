@@ -13,14 +13,14 @@
             <!-- Project Name -->
             <div class="mb-3">
                 <label for="id_project_name" class="form-label">Project name</label>
-                <input type="text" class="form-control" name="project_name" id="id_project_name" placeholder="Project name"
+                <input type="text" class="form-control" name="project_name" id="id_project_name"
                     value="{{form.initial.project_name}}" required autofocus>
             </div>
 
             <!-- Description -->
             <div class="mb-3">
                 <label for="id_descripion" class="form-label">Description</label>
-                <textarea type="text" class="form-control" name="description" id="id_descripion" placeholder="Description"
+                <textarea type="text" class="form-control" name="description" id="id_descripion"
                     cols="30" rows="10" required>{{form.initial.description}}</textarea>
             </div>
 
@@ -34,21 +34,21 @@
             <!-- Alt image -->
             <div class="mb-3">
                 <label for="id_alt_image" class="form-label">Alt text for image</label>
-                <input type="text" class="form-control" name="alt_image" id="id_alt_image" placeholder="Alt image"
+                <input type="text" class="form-control" name="alt_image" id="id_alt_image"
                     value="{{form.initial.alt_image}}">
             </div>
 
             <!-- Client -->
             <div class="mb-3">
                 <label for="id_client_name" class="form-label">Client</label>
-                <input type="text" class="form-control" name="client_name" id="id_client_name" placeholder="Client"
+                <input type="text" class="form-control" name="client_name" id="id_client_name"
                     value="{{form.initial.client_name}}" required>
             </div>
 
             <!-- Location -->
             <div class="mb-3">
                 <label for="id_location" class="form-label">Location</label>
-                <input type="text" class="form-control" name="location" id="id_location" placeholder="Location"
+                <input type="text" class="form-control" name="location" id="id_location"
                     value="{{form.initial.location}}" required>
             </div>
 
@@ -56,13 +56,13 @@
             <div class="mb-3 form-check">
                 <label for="id_finished" class="form-check-label">Finished</label>
                 <input type="checkbox" {% if form.initial.finished == True %}checked{% endif %} class="form-check-input"
-                    name="finished" id="id_finished" placeholder="Finished">
+                    name="finished" id="id_finished">
             </div>
 
             <!-- Tagline -->
             <div class="mb-3">
                 <label for="id_tagline" class="form-label">Tagline</label>
-                <input type="text" class="form-control" name="tagline" id="id_tagline" placeholder="Tagline"
+                <input type="text" class="form-control" name="tagline" id="id_tagline"
                     value="{{form.initial.tagline}}" required>
             </div>
 
