@@ -5,9 +5,9 @@
 <div class="container my-5">
     <h1 class="mb-5">Login</h1>
 
-    <form method="POST" enctype="multipart/form-data">{% csrf_token %}
+    <form method="POST" enctype="multipart/form-data" class="mb-5">{% csrf_token %}
 
-        <p>Please enter your staff login details</p>
+        <p class="fs-4"><strong>Please enter your staff login details</strong></p>
 
         <div class="mb-3">
             <label for="username" class="form-label">Username</label>
@@ -22,6 +22,8 @@
         <button type="submit" class="btn btn-primary">Login</button>
 
     </form>
+
+    <a href="" class="btn btn-outline-secondary btn-sm">Don't have an account? Register to request access</a>
 
 </div>
 
