@@ -7,9 +7,11 @@
 
     <form method="POST" enctype="multipart/form-data" class="mb-5">{% csrf_token %}
 
-        <p class="fs-4"><strong>Please enter your staff login details</strong></p>
+        <p class="fs-4"><strong>Create a staff account</strong></p>
 
-        <div class="mb-3">
+        {{ form.as_p }}
+
+        <!-- <div class="mb-3">
             <label for="username" class="form-label">Username</label>
             <input type="text" class="form-control" name="username" id="username" aria-describedby="emailHelp">
         </div>
@@ -20,8 +22,13 @@
         </div>
 
         <div class="mb-3">
-            <label for="LastName" class="form-label">Last Name</label>
-            <input type="text" class="form-control" name="last_name" id="LastName">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" name="last_name" id="lastName">
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" name="email" id="email">
         </div>
 
         <div class="mb-3">
@@ -30,9 +37,9 @@
         </div>
 
         <div class="mb-3">
-            <label for="workPassword2" class="form-label">Password</label>
+            <label for="workPassword2" class="form-label">Confirm password</label>
             <input type="password" class="form-control" name="password" id="workPassword2">
-        </div>
+        </div> -->
 
         <button type="submit" class="btn btn-primary">Register for an account</button>
 

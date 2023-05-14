@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 
 
@@ -28,4 +29,21 @@ def logout_staff_user(request):
 
 
 def register_staff_user(request):
-    return render(request, 'staff/register.html', {})
+    if request.method == "POST":
+        form = UserCreationForm()(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data['username']
+            first_name = form.cleaned_data['first_name']
+            last_name = form.cleaned_data['last_name']
+            email = form.cleaned_data['email']
+            password = form.cleaned_data['password']
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            messages.success(request, "Account registered")
+            return redirect('home')
+    else:
+        form = UserCreationForm()
+    return render(request, 'staff/register.html', {
+        'form': form
+    })
