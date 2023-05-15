@@ -4,33 +4,37 @@
 
 {% block content %}
 
-<div class="container my-5">
-
-    <h1 class="mb-5">Register</h1>
+<div class="container my-5 d-flex justify-content-center">
 
     <form method="POST" enctype="multipart/form-data" class="mb-5">{% csrf_token %}
 
+        <h1 class="mb-5">Register</h1>
+
+        <p class="fs-4"><strong>Create a staff account</strong></p>
+
         <div class="row">
-
-            <p class="fs-4"><strong>Create a staff account</strong></p>
-
-            <div class="col-6">
-                {{ form|crispy }}
-            </div>
-
-            <div class="col-6">
-                Image placeholder can go here
-            </div>
-
+            <div class="col-6">{{ form.username|as_crispy_field }}</div>
+            <div class="col-6">{{ form.email|as_crispy_field }}</div>
+        </div>
+        <div class="row">
+            <div class="col-6">{{ form.first_name|as_crispy_field }}</div>
+            <div class="col-6">{{ form.last_name|as_crispy_field }}</div>
+        </div>
+        <div class="row">
+            <div class="col-6">{{ form.password1|as_crispy_field }}</div>
+            <div class="col-6">{{ form.password2|as_crispy_field }}</div>
         </div>
 
-
         <button type="submit" class="btn btn-primary mt-3">Register for an account</button>
+
+        <p>
+            <a href="{% url 'login' %}" class="btn btn-outline-secondary btn-sm mt-5">Have a staff account? Login</a>
+        </p>
+
 
     </form>
 
 
-    <a href="{% url 'login' %}" class="btn btn-outline-secondary btn-sm">Have a staff account? Login</a>
 
 </div>
 
