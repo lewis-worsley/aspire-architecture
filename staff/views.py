@@ -42,7 +42,7 @@ def register_staff_user(request):
             form.save()
             username = form.cleaned_data['username']
             password = form.cleaned_data['password1']
-            user = authenticate(username=username, password=password)
+            # user = authenticate(username=username, password=password)
             messages.info(request, "Your account is pending approval. Admin has been notified of your request.")
             return redirect('home')
     else:
