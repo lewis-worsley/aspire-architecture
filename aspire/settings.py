@@ -55,6 +55,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
 
+    # Crispy Bootstrap forms
+    "crispy_forms",
+    "crispy_bootstrap5",
+
     # Cloudinary
     'cloudinary_storage',
     'django.contrib.staticfiles',
@@ -64,6 +68,11 @@ INSTALLED_APPS = [
     'project',
     'staff',
 ]
+
+# Crispy Forms
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
