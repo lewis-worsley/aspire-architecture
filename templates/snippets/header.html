@@ -7,11 +7,11 @@
             <div class="d-flex align-items-center justify-content-evenly">
 
                 {% if request.path == "/" %}
-                    <span class="d-none d-sm-block">Hi {{user}}, you're now logged in.</span>
+                    <span class="d-none d-sm-block">Hi {{user}}, you're logged in.</span>
                     <a class="btn btn-link btn-sm" href="admin">Admin Portal</a>
 
                 {% else %}
-                    <span class="d-none d-sm-block">Hi {{user}}, you're now logged in.</span>
+                    <span class="d-none d-sm-block">Hi {{user}}, you're logged in.</span>
                     <a class="btn btn-link btn-sm" href="/admin">Admin Portal</a>
 
                 {% endif %}
