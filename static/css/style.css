@@ -112,6 +112,10 @@ footer {
     color: white;
 }
 
+.btn-link:hover {
+    color: #52a2d6;
+}
+
 /* Buttons END */
 
 
