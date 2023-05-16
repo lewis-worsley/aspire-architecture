@@ -6,7 +6,7 @@
 
 <div class="container my-5 d-flex justify-content-center">
 
-    <form method="POST" enctype="multipart/form-data" class="mb-5">{% csrf_token %}
+    <form method="POST" enctype="multipart/form-data">{% csrf_token %}
 
         <h1 class="mb-5">Register</h1>
 
@@ -28,13 +28,10 @@
         <button type="submit" class="btn btn-primary mt-3">Register for an account</button>
 
         <p>
-            <a href="{% url 'login' %}" class="btn btn-outline-secondary btn-sm mt-5">Have a staff account? Login</a>
+            <a href="{% url 'login' %}" class="btn btn-outline-secondary btn-sm mt-4">Have a staff account? Login</a>
         </p>
 
-
     </form>
-
-
 
 </div>
 

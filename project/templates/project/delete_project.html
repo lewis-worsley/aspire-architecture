@@ -2,25 +2,28 @@
 
 {% block content %}
 
-<div class="container my-5">
+<div class="container my-5 d-flex justify-content-center body">
 
     <!-- Not visible to public user. Only authorised users (staff with permissions) can view this -->
     {% if user.is_staff == True %}
-        <h1 class="mb-5">Delete Project: {{ project.project_name }}</h1>
+        <form method="POST" enctype="multipart/form-data" class="col-sm-12 col-md-9">{% csrf_token %}
 
-            <form method="POST" enctype="multipart/form-data">{% csrf_token %}
+            <h1 class="mb-5 ">Delete Project: {{ project.project_name }}</h1>
 
-                <p>Are you sure you want to delete the project "{{project.project_name}}"?</p>
-                <button type="submit" class="btn btn-danger mb-3">DELETE</button>
-                
-            </form>
+            <p>Are you sure you want to delete the project "{{project.project_name}}"?</p>
 
-        <a href="/#projects" class="btn btn-outline-primary">CANCEL</a>
+            <button type="submit" class="btn btn-danger mb-3">DELETE</button>
+            
+            <p>
+                <a href="/#projects" class="btn btn-outline-primary">CANCEL</a>
+            </p>
+
+        </form>
 
     <!-- Unauthorised users on the page will see the following message below -->
     {% else %}
-        <div class="container my-5">
-            <h1>Unauthorised permission</h1>
+        <div>
+            <h1 class="mb-4">Unauthorised permission</h1>
             <p>Sorry, you're not permitted to enter this page. Please return to the <a href="/">homepage</a>.</p>
         </div>
 
