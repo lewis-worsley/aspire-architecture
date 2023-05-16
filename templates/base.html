@@ -25,17 +25,18 @@
     <div class="container-fluid g-0">
 
         <!-- Header (logo and navbar) a permanent view across the website -->
-
         {% include 'snippets/header.html' %}
 
+        <!-- Bootstrap alert messages -->
         {% include 'messages.html' %}
 
+        <div class="content">
             {% block content %}
             {% endblock content %}
+        </div>
 
-            <!-- Footer (logo and navbar) a permanent view across the website -->
-
-            {% include 'snippets/footer.html' %}
+        <!-- Footer (logo and navbar) a permanent view across the website -->
+        {% include 'snippets/footer.html' %}
 
         </div>
 

@@ -1,4 +1,12 @@
-h1, h2, h3, h4 {
+.content {
+    min-height: 30vh;
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
     text-transform: uppercase;
     color: #001b33;
     letter-spacing: 5px;
@@ -75,7 +83,7 @@ footer {
 #contact {
     background: url(https://res.cloudinary.com/dys7tcjln/image/upload/v1682243828/architecture-sketching_k7veaf.jpg) no-repeat;
     background-size: cover;
-    background-color: rgba(0,27,51, 0.9);
+    background-color: rgba(0, 27, 51, 0.9);
     background-blend-mode: overlay;
     color: white;
     background-position: right
@@ -91,7 +99,7 @@ footer {
 /* Buttons START */
 
 .btn-primary {
-    background-color:#023c62
+    background-color: #023c62
 }
 
 .btn {
