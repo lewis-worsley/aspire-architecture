@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
-from .forms import RegisterStaffUserForm
 from django.contrib import messages
+
+from .forms import RegisterStaffUserForm
 
 
 def login_staff_user(request):
@@ -19,10 +20,10 @@ def login_staff_user(request):
 
         if user is not None:
             login(request, user)
-            messages.success(request, "Login successful!")
+            messages.success(request, f"Login successful! Hello {user}.")
             return redirect('home')
         else:
-            messages.warning(request, "Error occured. Login details incorrect. Invalid username or password")
+            messages.error(request, "Error occured. Login details incorrect. Invalid username or password.")
             return redirect('login')
 
     else:
@@ -36,17 +37,26 @@ def logout_staff_user(request):
 
 
 def register_staff_user(request):
+
+    user = request.user
+
+    if user.is_staff:
+        return redirect('home')
+
     if request.method == "POST":
         form = RegisterStaffUserForm(request.POST)
+
         if form.is_valid():
             form.save()
             username = form.cleaned_data['username']
             password = form.cleaned_data['password1']
-            # user = authenticate(username=username, password=password)
             messages.info(request, "Your account is pending approval. Admin has been notified of your request.")
             return redirect('home')
+        else:
+            for error in list(form.errors.values()):
+                messages.error(request, error)
+
     else:
         form = RegisterStaffUserForm()
-    return render(request, 'staff/register.html', {
-        'form': form
-    })
+        
+    return render(request, 'staff/register.html', {'form': form})
