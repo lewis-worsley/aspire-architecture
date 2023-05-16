@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.utils.text import slugify
+from django.contrib import messages
 
 from project.models import Project
 from project.forms import ProjectForm, UpdateProjectForm
@@ -29,6 +30,7 @@ def create_project_view(request):
             item = form.save(commit=False)
             item.slug = slugify(item.project_name)
             item.save()
+            messages.success(request, f"New project created: {item.project_name}")
             return redirect('/#projects')
 
     form = ProjectForm()
@@ -52,6 +54,7 @@ def edit_project(request, slug):
             item = form.save(commit=False)
             item.slug = slugify(item.project_name)
             item.save()
+            messages.success(request, f"Project updated: {item.project_name}")
             return redirect('/#projects')
 
     form = UpdateProjectForm(instance=project)
@@ -75,4 +78,5 @@ def delete_project(request, slug):
 
     elif request.method == "POST":
         project.delete()
+        messages.success(request, f"Project deleted: {project.project_name}")
         return redirect('/#projects')

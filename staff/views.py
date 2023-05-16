@@ -20,7 +20,7 @@ def login_staff_user(request):
 
         if user is not None:
             login(request, user)
-            messages.success(request, f"Login successful! Hello {user}.")
+            messages.success(request, f"Login successful! Hello {username}.")
             return redirect('home')
         else:
             messages.error(request, "Error occured. Login details incorrect. Invalid username or password.")
