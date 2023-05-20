@@ -23,14 +23,10 @@ def login_staff_user(request):
 
         if user is not None:
             login(request, user)
-            messages.success
-            (request,
-                f"Login successful! Hello {username}.")
+            messages.success(request, f"Login successful! Hello {username}.")
             return redirect('home')
         else:
-            messages.error
-            (request,
-                "Login details incorrect. Invalid username or password.")
+            messages.error (request, "Login details incorrect. Invalid username or password.")
             return redirect('login')
 
     else:
@@ -62,15 +58,10 @@ def register_staff_user(request):
             pattern = r'^\w+@aspire\.com$'
 
             if not re.match(pattern, email):
-                messages.error
-                (request,
-                    "Invalid email address. Please use the @aspire.com domain")
                 return render(request, 'staff/register.html', {'form': form})
 
             form.save()
-            messages.info
-            (request,
-                "Account pending approval. Admin has been notified.")
+            messages.info(request, "Account pending approval. Admin has been notified.")
             return redirect('home')
 
     else:
