@@ -13,12 +13,12 @@ class RegisterStaffUserForm(UserCreationForm):
         validators=[
             RegexValidator(
                 regex='^^\w+@aspire\.com$',
-                message=
-                'Invalid email address. Please use the @aspire.com domain',
+                message='Invalid email address. Please use the @aspire.com domain',
                 code='invalid email address'
             ),
         ])
 
     class Meta:
         model = User
-        fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2')
+        fields = ('username', 'first_name', 'last_name',
+                  'email', 'password1', 'password2')

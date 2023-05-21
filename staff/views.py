@@ -26,7 +26,8 @@ def login_staff_user(request):
             messages.success(request, f"Login successful! Hello {username}.")
             return redirect('home')
         else:
-            messages.error (request, "Login details incorrect. Invalid username or password.")
+            messages.error(
+                request, "Incorrect login details. Invalid username or password.")
             return redirect('login')
 
     else:
@@ -61,7 +62,8 @@ def register_staff_user(request):
                 return render(request, 'staff/register.html', {'form': form})
 
             form.save()
-            messages.info(request, "Account pending approval. Admin has been notified.")
+            messages.info(
+                request, "Account pending approval. Admin has been notified.")
             return redirect('home')
 
     else:
