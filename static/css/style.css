@@ -55,7 +55,11 @@ footer {
     background-size: cover;
 }
 
-#hero-heading-white {
+#hero-heading-white-xl {
+    color: white;
+}
+
+#hero-heading-white-lg {
     color: white;
 }
 
