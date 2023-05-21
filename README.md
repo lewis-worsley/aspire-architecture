@@ -1,108 +1,346 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Aspire Architecture
+Aspire Architecture is an architecture firm based in the heart of London, England, that works with clients both nationally and internationally.
 
-Welcome Ryan Lewis,
+<br><br>
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+<img src="">
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+<br>
 
-## Gitpod Reminders
+## Contents
+<hr>
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+[Planning & Development](https://github.com/lewis-worsley/aspire-architecture/blob/main/README.md#planning--development)
 
-`python3 -m http.server`
+[Features](https://github.com/lewis-worsley/aspire-architecture/blob/main/README.md#features)
 
-A blue button should appear to click: _Make Public_,
+[Testing](https://github.com/lewis-worsley/aspire-architecture/blob/main/README.md#testing)
 
-Another blue button should appear to click: _Open Browser_.
+[Deployment](https://github.com/lewis-worsley/aspire-architecture/blob/main/README.md#deployment)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+[Languages](https://github.com/lewis-worsley/aspire-architecture/blob/main/README.md#languages)
 
-A blue button should appear to click: _Make Public_,
+[Software](https://github.com/lewis-worsley/aspire-architecture/blob/main/README.md#software)
 
-Another blue button should appear to click: _Open Browser_.
+[Media](https://github.com/lewis-worsley/aspire-architecture/blob/main/README.md#media)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+[Credits](https://github.com/lewis-worsley/aspire-architecture/blob/main/README.md#credits)
 
-To log into the Heroku toolbelt CLI:
+<br>
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## Planning & Development
+<hr>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+<br>
 
-------
+### Site Objective
+<hr>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 
-## Release History
+<br>
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### Target Audience
+<hr>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+<br>
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Prototype
+<hr>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+<br>
+<br>
+<strong>Desktop Prototype</strong><br>
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+<img src="">
+<img src="">
+<br>
+<br>
+<strong>Mobile Prototype</strong>
+<br>
+<img src="">
+<img src="">
+<img src="">
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+<br>
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### Colour Scheme
+<hr>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+<br>
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Typography
+<hr>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+<br>
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+## Features
+<hr>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+<br>
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Existing Features
+<hr>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+<br>
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+#### Navigation Bar
+<hr>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+<br>
 
-------
+#### Hero Image
+<hr>
 
-## FAQ about the uptime script
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-**Why have you added this script?**
+<img src="">
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+<br>
 
-**How will this affect me?**
+#### About
+<hr>
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+<img src="">
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+<br>
 
-**So….?**
+#### Stats
+<hr>
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-**Can I opt out?**
+<img src=">
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+<br>
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+#### Services
+<hr>
 
-**Anything more?**
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+For future development: none of the buttons in this section direct the user elsewhere on the website. At the moment, the buttons are there for presentation purposes. However, once the appropriate services pages are added onto the website, the buttons will redirect the user to the respective service page they've requested to see.
 
----
+<img src="">
 
-Happy coding!
+<br>
+
+#### Projects (CRUD functionality)
+<hr>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+For future development: none of the buttons in this section direct the user elsewhere on the website. At the moment, the buttons are there for presentation purposes. However, once the appropriate services pages are added onto the website, the buttons will redirect the user to the respective service page they've requested to see.
+
+<img src="">
+
+<br>
+
+#### Contact
+<hr>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+For future development: none of the buttons in this section direct the user elsewhere on the website. At the moment, the buttons are there for presentation purposes. However, once the appropriate services pages are added onto the website, the buttons will redirect the user to the respective service page they've requested to see.
+
+<img src="">
+
+<br>
+
+#### Footer
+<hr>
+
+- The footer indicates the end of the page - this is replicated on each page on the website.
+- Social media icons (provided by Font Awesome) are included on the footer to encourage the visitor to engage with the brand. 
+- For accessibilily, each social link has an aria-label attribute
+- When a user clicks on one of the social media icons, the browser redirects the visitor to a new tab. This prevents users from leaving the website
+- The company details have the appropriate telephone and email links to make user experience friendly. Creating a sense of 'ease-of-use' on the website will evoke positive emotions and help encourage visitors to communicate with the brand
+
+For future development: the footer is to include links to high-priorty pages and office locations.
+
+<img src="">
+
+<br>
+
+## Testing
+<hr>
+Throughout the build of the website, but more so after the structure and contents of the page was added, Google Dev-tools was used extensively to validate new ideas, fix errors, unearth solutions, and ensure consistency with the design and user experience across various devices by ensuring the website was responsive.
+
+<br>
+
+### Am I Responsive
+<hr>
+
+To check to see if the website was responsive across different types of devices, the URL was entered into https://ui.dev/amiresponsive/. The website it appeared as expected across each device. The image snippet in the intro section of this README.md is provided by https://ui.dev/amiresponsive/
+
+<br>
+
+### Testing on devices
+<hr>
+
+During development of the website, the code was written and tested on HP EliteBook 840 G5 14". 
+
+Google Dev-tools was used extensively throughout the process, as it provides instant feedback on appearence and responsivity across elements and dimensions.
+
+After development, the website has been tested on the following devices:
+
+- HP EliteBook 840 G5 14" - Chrome and Microsoft Edge
+- LG 21.5" monitor 
+- iPhone XS Max - Chrome and Safari
+
+<strong>HP EliteBook 840 G5 14" - using Google Device Toolbar</strong><br>
+<img src="">
+<br>
+<br>
+<strong>iPhone XS Max</strong><br>
+<img src="">
+<br>
+
+Noted for future development:
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+
+
+<br>
+
+### Testing links
+<hr>
+
+Results:
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+
+
+<br>
+
+### Validator Testing
+<hr>
+
+The three websites used to validate the code are:
+
+- https://validator.w3.org/
+- https://jigsaw.w3.org/css-validator/
+- https://pep8ci.herokuapp.com/
+
+For accessibility, the following websites and extensions were used:
+
+- WCAG Contrast Checker
+- Lighthouse
+
+<br>
+
+#### HTML Validator
+<hr>
+Errors discovered:<br>
+<img src="">
+
+<br>
+
+Errors fixed:<br>
+<img src="">
+
+<br>
+
+#### CSS Validator
+Website used to validate CSS code: https://jigsaw.w3.org/css-validator/
+<hr>
+Errors discovered:<br>
+<img src="">
+
+Errors fixed:<br>
+<img src=""><br>
+
+<br>
+
+#### WCAG Contrast Checker
+<hr>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+
+<br>
+
+#### Lighthouse
+<hr>
+Lighthouse has reported extemely positive metrics (see graphic below) with scores ranging from 90 to 100. The results are:
+
+- Performance: 96
+- Accessibility: 100
+- Best practises: 92
+- SEO: 90
+
+<img src="">
+<br>
+<br>
+
+## Deployment
+<hr>
+The site was deployed to GitHub pages. The steps to deploy are as follows:
+
+- In the GitHub repository, navigate to the Settings tab
+- From the source section drop-down menu, select the Main Branch
+- Once the master branch has been selected, the page will be automatically refreshed with the word 'active' displayed in a green colour at the end of the sentence (next to last duration when published)
+The live link can be found here - https://lewis-worsley.github.io/aspire-architecture/
+
+<br>
+
+## Languages
+<hr>
+The coding languages used:
+
+- HTML
+- CSS
+- Python
+- Django
+- Bootstrap
+
+<br>
+
+## Software
+<hr>
+The design for Aspire Architecture was created via the Adobe Creative Cloud Suite; more specifically I used:
+
+- Abobe Photoshop
+- Adobe InDesign
+- Adobe Illustrator
+
+Through using these three tools, I was able to design the logo, create imagery, design prototypes, and compress web images by either reducing image size or quality.
+
+<br>
+
+## Media
+<hr>
+The logo for Aspire Architecture was designed by myself, Lewis Worsley.
+<br>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+
+<br>
+
+## Credits
+<hr>
+To help bring this project to life, the following deserve recognition:
+
+<br>
+
+### Content
+<hr>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+
+- Social media text icons located in the footer were sourced from https://fontawesome.com/
+
+<br>
+
+### Thanks
+<hr>
+
+- Richard Wells
+    - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
