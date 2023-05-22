@@ -48,7 +48,7 @@ footer {
 /* Hero Section (about.html) START */
 
 #hero {
-    background: url(https://res.cloudinary.com/dys7tcjln/image/upload/q_20/v1681984348/Architecture-50_erryhb.avif) no-repeat;
+    background: url(https://res.cloudinary.com/dys7tcjln/image/upload/q_50/v1681984348/Architecture-50_erryhb.jpg) no-repeat;
     width: 100%;
     background-position: center;
     height: 25vw;
@@ -85,7 +85,7 @@ footer {
 /* Contact START */
 
 #contact {
-    background: url(https://res.cloudinary.com/dys7tcjln/image/upload/q_15/v1682243828/architecture-sketching_k7veaf.avif) no-repeat;
+    background: url(https://res.cloudinary.com/dys7tcjln/image/upload/q_50/v1682243828/architecture-sketching_k7veaf.jpg) no-repeat;
     background-size: cover;
     background-color: rgba(0, 27, 51, 0.9);
     background-blend-mode: overlay;
