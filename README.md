@@ -35,51 +35,91 @@ The company primarily works with private clients and organisations but their ser
 
 ## Planning & Development
 <hr>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Aspire Architecture was formed to attack a gap in the market in real estate and development by offering a tailored and specialised approach for clients, by combining visionary architects with detail-orientated designers. With this approach, Aspire can offer their services to all verticals and sectors.
 
 <br>
 
 ### Site Objective
 <hr>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+As a professional company, which serves both consumers and organisations, the website is designed to cater for mulitple audiences in which they can derive information tailored to their needs.
+
+<br>
+It's a services-orientated lead generation website, with the aim of converting as many visitors into leads. Alternatively, users can call or email the company for further information. 
 
 <br>
 
+In summary, the site is to:
+
+- to potray high-value to attract clients with disposable income to invest loads of money
+- inform and educate the visitor
+- provide an easy-to-use interface which allows the user to navigate across the website without obstacles
+- be able to update and display current and finished projects so visitors see Aspire's portfolio
+- be able to communicate to both individuals and companies
+- make it accessible for all users
+- provide users with the option to reach out to Aspire via form, phone or email
+
+<br>
 
 ### Target Audience
 <hr>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+
+The website is designed to attract people in senior positions who have influence over key business decisions. The type of professionals (from private and public sectors) the messaging needs to resonate with are:
+
+- Owners
+- CEOs
+- Directors
+
+Equally, the website needs to appeal to individuals and families, but only to those whom earn over £100,000 annually. The messaging, presentation and imagery needs to reflect the importance of the person's/persons high-value investment. 
+
+<br>
+
+### User Stories 
+<hr>
+
+The user stories for admin/staff:
+
+- As as Site Admin, I'd like to create, update, read and delete projects so that the website remains up-to-date with the latest work
+- As a Site Admin, I'd like to be able to approve users who register for a staff account
+- As a Site Admin, I'd like to be able to restrict access to unauthorised users to pages they're not permitted to see
+- As a Site Admin, I'd like to be able to login and logout from the website
+
+The user stories for a visitor:
+
+- As a visitor, I'd like to be able to view the latest projects, whether current or finished
+- As a visitor, I'd like to be able to contact Aspire via my choice of contact method: form, phone or email
+- As a visitor, I'd like to be able to have an enjoyable experience on the page, including easy navigation
+
 
 <br>
 
 ### Prototype
 <hr>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-<br>
+The desktop and mobile prototypes for Aspire Architecture were designed in 2021 using Adobe software. Not every feature seen in the prototype have been replicated on the current version of the website, such as the testimonial section. 
+
 <br>
 <strong>Desktop Prototype</strong><br>
 
-<img src="">
-<img src="">
-<br>
-<br>
-<strong>Mobile Prototype</strong>
-<br>
-<img src="">
-<img src="">
-<img src="">
+<img src="https://res.cloudinary.com/dys7tcjln/image/upload/v1684791363/aspire-a-web-design_pzacow.jpg">
 
 <br>
 
 ### Colour Scheme
 <hr>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+The brand has a five colour palette. Blue was selected as the primary colour because it evokes positives emotions and feelings of trust, calm, honesty and responsability. 
+
+- Dark Navy: #001b33
+- Mid Blue: #023c62
+- Light grey: #b8b9b8
+- Mid Grey: #605c5c
+- White: #fffs
+
 <br>
 
 ### Typography
 <hr>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Bootstrap styling applied to text.
 
+<br>
 <br>
 
 ## Features
@@ -316,7 +356,7 @@ The design for Aspire Architecture was created via the Adobe Creative Cloud Suit
 - Adobe InDesign
 - Adobe Illustrator
 
-Through using these three tools, I was able to design the logo, create imagery, design prototypes, and compress web images by either reducing image size or quality.
+Through using these three tools, I was able to design the logo, produce a layout, design prototypes, and compress web images by either reducing image size or quality.
 
 <br>
 
