@@ -1,5 +1,10 @@
 # Aspire Architecture
-Aspire Architecture is an architecture firm based in the heart of London, England, that works with clients both nationally and internationally.
+Aspire Architecture (otherwise known as 'Aspire') is an architecture firm based in the heart of London, England, that works with clients both nationally and internationally.
+
+The company primarily works with private clients and organisations but their services can also be requested from public services too. Aspire aims, to help individuals and families design their dream home or space, and to help organisations bring their projects to life via effective collaboration. We achieve this by using:
+- innovative technology
+- sustainable material
+- and recruiting leading architects and designers
 
 <br><br>
 
