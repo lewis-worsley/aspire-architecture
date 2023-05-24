@@ -440,9 +440,21 @@ Future development:
 ##### Registration
 <hr>
 
-- Django Crispy Forms is used to authenticate users
+- Django Crispy Forms has been installed in the project to authenticate users
 
 <img src="https://res.cloudinary.com/dys7tcjln/image/upload/v1684881284/register_flyb6k.jpg">
+
+<br>
+
+<strong>Installation</strong>
+
+- Add Crispy Forms Libraries to installed apps in 'settings.py'
+
+<img src="https://res.cloudinary.com/dys7tcjln/image/upload/v1684943894/crispy-installed-apps_fbwdid.jpg">
+
+- Add Crispy Forms variables in 'settings.py' as follows:
+
+<img src="https://res.cloudinary.com/dys7tcjln/image/upload/v1684943894/crispy-forms-variables_pkcyn8.jpg">
 
 <br>
 
