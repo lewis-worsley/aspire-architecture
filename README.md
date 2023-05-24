@@ -6,7 +6,7 @@ The company primarily works with private clients and organisations but their ser
 - sustainable material
 - and recruiting leading architects and designers
 
-<img src="">
+<img src="https://res.cloudinary.com/dys7tcjln/image/upload/v1684963469/am-i-responsive_ulekhh.png">
 
 <br>
 
@@ -93,10 +93,13 @@ The user stories for a visitor:
 
 ### Prototype
 <hr>
+
 The desktop and mobile prototypes for Aspire Architecture were designed in 2021 using Adobe software. Not every feature seen in the prototype have been replicated on the current version of the website, such as the testimonial section. 
 
 <br>
-<strong>Desktop Prototype</strong><br>
+<strong>Desktop Prototype</strong>
+
+<br>
 
 <img src="https://res.cloudinary.com/dys7tcjln/image/upload/v1684791363/aspire-a-web-design_pzacow.jpg">
 
@@ -120,7 +123,6 @@ The brand has a five colour palette. Blue was selected as the primary colour bec
 
 Bootstrap styling applied to text.
 
-<br>
 <br>
 
 ## Features
@@ -496,7 +498,7 @@ Throughout the build of the website, but more so after the structure and content
 ### Am I Responsive
 <hr>
 
-To check to see if the website was responsive across different types of devices, the URL was entered into https://ui.dev/amiresponsive/. The website it appeared as expected across each device. The image snippet in the intro section of this README.md is provided by https://ui.dev/amiresponsive/
+To check to see if the website was responsive across different types of devices, the URL was entered into https://ui.dev/amiresponsive/. The website appeared as expected across each device. The image snippet in the intro section of this README.md is provided by https://ui.dev/amiresponsive/.
 
 <br>
 
@@ -743,7 +745,7 @@ To manage static and media files for the project by using a cloud service: https
 
 ## Languages
 <hr>
-The coding languages used:
+The coding languages and frameworks used:
 
 - HTML
 - CSS
@@ -767,10 +769,10 @@ Through using these three tools, I was able to design the logo, produce a layout
 
 ## Media
 <hr>
-The logo for Aspire Architecture was designed by myself, Lewis Worsley.
-<br>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+The logo for Aspire Architecture was designed by myself, Lewis Worsley.
+
+<img src="https://res.cloudinary.com/dys7tcjln/image/upload/c_scale,w_163/v1681817225/Aspire_logo_WHITE_vye9ka.png">
 
 <br>
 
@@ -783,8 +785,8 @@ To help bring this project to life, the following deserve recognition:
 ### Content
 <hr>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-
+- Stack Overflow for providing answers to errors discovered during the project and implementing new ideas
+- All images were sourced from Google Images
 - Social media text icons located in the footer were sourced from https://fontawesome.com/
 
 <br>
@@ -793,4 +795,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <hr>
 
 - Richard Wells
-    - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    - With his help and guidance, he gave me the belief and encouragement I could do this project to a high and professional standard. When I had questions and doubts, he was always on hand to listen and advise me, which I greatly appreciate
+- Dominic Paul
+    - For teaching me new tips and syntaxs, and advising me best practises in the real world from his own experiences
+- The following creators on YouTube for sharing tips and inspiration
+    - codemy.com
+    - CodingWithMitch
