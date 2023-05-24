@@ -33,17 +33,19 @@ The company primarily works with private clients and organisations but their ser
 
 ## Planning & Development
 <hr>
+
 Aspire Architecture was formed to attack a gap in the market in real estate and development by offering a tailored and specialised approach for clients, by combining visionary architects with detail-orientated designers. With this approach, Aspire can offer their services to all verticals and sectors.
 
 <br>
 
 ### Site Objective
 <hr>
-As a professional company, which serves both consumers and organisations, the website is designed to cater for mulitple audiences in which they can derive information tailored to their needs.
 
+As a professional company, which serves both consumers and organisations, the website is designed to cater for mulitple audiences in which they can derive information tailored to their needs.
+<br>
 <br>
 It's a services-orientated lead generation website, with the aim of converting as many visitors into leads. Alternatively, users can call or email the company for further information. 
-
+<br>
 <br>
 
 In summary, the site is to:
@@ -87,7 +89,6 @@ The user stories for a visitor:
 - As a visitor, I'd like to be able to contact Aspire via my choice of contact method: form, phone or email
 - As a visitor, I'd like to be able to have an enjoyable experience on the page, including easy navigation
 
-
 <br>
 
 ### Prototype
@@ -116,6 +117,7 @@ The brand has a five colour palette. Blue was selected as the primary colour bec
 
 ### Typography
 <hr>
+
 Bootstrap styling applied to text.
 
 <br>
@@ -585,12 +587,123 @@ Lighthouse has reported extemely positive metrics (see graphic below) with score
 
 ## Deployment
 <hr>
-The site was deployed to GitHub pages. The steps to deploy are as follows:
 
-- In the GitHub repository, navigate to the Settings tab
-- From the source section drop-down menu, select the Main Branch
-- Once the master branch has been selected, the page will be automatically refreshed with the word 'active' displayed in a green colour at the end of the sentence (next to last duration when published)
-The live link can be found here - https://lewis-worsley.github.io/aspire-architecture/
+The project was deployed on Heroku, and uses ElephantSQL for its database.
+
+<br>
+
+### ElephantSQL
+<hr>
+
+A managed postgres database was created with ElephantSQL (https://www.elephantsql.com/)
+
+Steps to create a database:
+
+- Select 'Create New Instance
+- Give a database a 'name' and select a plan. Proceed to next step by clicking 'Select Region'
+- Choose your region and then click 'Review'
+- Once created, click on your recently created instance
+- Copy the database URL - this will be used to connect the database to the project. It will needed to be inserted in the GitHub repository under 'settings.py' and in Heroku
+
+<br>
+
+### Heroku
+<hr>
+
+Steps to deploy:
+
+- Create a new app in Heroku
+- Select "New" and "Create new app"
+- Name the new app and choose a region
+- In the 'Settings' tab, navigate to 'Reveal Config Vars'
+- Create a new envionment variable called "DATABASE_URL' and paste the ElephantSQL database URL into the corresponding field
+- Create another environment variable called "SECRET_KEY" and make up a random secret key or use https://miniwebtool.com/django-secret-key-generator/ to make one 
+
+### env.py
+<hr>
+
+- In your project, create an env.py file in the root directory and ensure the code appears as:
+ 
+<img src="https://res.cloudinary.com/dys7tcjln/image/upload/v1684931467/env.py_olyqds.jpg">
+
+- The ElephantSQL database URL should be pasted for the DATABASE_URL value
+- The secret key should be pasted for the SECRET_KEY value
+
+### settings.py
+<hr>
+
+- In settings.py file, add the following library:
+    - from pathlib import Path
+    - import os
+    - import dj_database_url
+
+    - if os.path.isfile("env.py"):
+        - import env
+
+- Link the DATABASES value to the env.py file with the following code: 
+
+<img src="https://res.cloudinary.com/dys7tcjln/image/upload/v1684931970/databases-value_oycroc.jpg">
+
+- Now the app models can be migrated to the new database by executing the following code in the command line:
+    - python3 manage.py migrate
+
+### Cloudinary
+<hr>
+
+To manage static and media files for the project by using a cloud service: https://cloudinary.com/
+
+- From the account tab, copy the 'cloudinary URL' and paste it into the env.py as the CLOUDINARY_URL value
+- In Heroku, add the CLOUDINARY_URL variable into Config Vars
+- In heroku, Add DISABLE_COLLECTSTATIC to Heroku Config Vars with the value of 1 (<strong></strong>needs to be removed before final deployment!</strong>)
+
+- Add Cloudinary Libraries to installed apps in 'settings.py' file in your project:
+
+<img src="https://res.cloudinary.com/dys7tcjln/image/upload/v1684934120/cloudinary-installed-apps_auxjaw.jpg">
+
+- For Cloudinary to operate, the static files should appear as follows
+
+<img src="https://res.cloudinary.com/dys7tcjln/image/upload/v1684934120/static-media_femknc.jpg">
+<br>
+
+(<strong>note: order is important</strong>)
+
+<br>
+
+### Remaining steps
+<hr>
+
+- Link file to the templates directory in Heroku. Place under the BASE_DIR line. It should resemble as follows:
+
+<img src="https://res.cloudinary.com/dys7tcjln/image/upload/v1684934836/base-dir_yv3f3w.jpg">
+
+- Change the templates directory to TEMPLATES_DIR. Place within the TEMPLATES array. It should resemble as follows:
+
+<img src="https://res.cloudinary.com/dys7tcjln/image/upload/v1684934836/templates-dir_uh8wm3.jpg">
+<br>
+
+- Add Heroku Hostname to ALLOWED_HOSTS. It should appear as:
+    - ALLOWED_HOSTS=["project_name.herokuapp.com", "localhost"]
+- Create 3 new folders on top level directory:
+    - media
+    - static
+    - templates
+- Create a Procfile on the top level directory:
+    - Procfile
+- In Procfile, add the following code:
+    - web: gunicorn project_name.wsgi
+- Save all files
+- In the terminal, add, commit and push changes to GitHub
+- Remove DISABLE_COLLECTSTATIC from Heroku Config Vars
+
+<br>
+
+#### Final deployment in Heroku
+<hr>
+
+- Click on "Deploy" and select your deploy method and repository.
+- Click "Connect" on selected repository.
+- Either choose "Enable Automatic Deploys" or "Deploy Branch" in the manual deploy section.
+- Heroku will now deploy the site.
 
 <br>
 
