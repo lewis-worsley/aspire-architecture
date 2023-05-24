@@ -503,7 +503,7 @@ To check to see if the website was responsive across different types of devices,
 ### Testing on devices
 <hr>
 
-During development of the website, the code was written and tested on HP EliteBook 840 G5 14". 
+During development of the website, the code was written and tested on HP EliteBook 840 G5 14" and on the LG 21.5" monitor - most of the screenshots in this README.md file have been provided by these two screens.
 
 Google Dev-tools was used extensively throughout the process, as it provides instant feedback on appearence and responsivity across elements and dimensions.
 
@@ -513,28 +513,28 @@ After development, the website has been tested on the following devices:
 - LG 21.5" monitor 
 - iPhone XS Max - Chrome and Safari
 
-<strong>HP EliteBook 840 G5 14" - using Google Device Toolbar</strong><br>
-<img src="">
-<br>
-<br>
-<strong>iPhone XS Max</strong><br>
-<img src="">
 <br>
 
-Noted for future development:
+<strong>iPhone XS Max</strong>
 
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-
+<img src="https://res.cloudinary.com/dys7tcjln/image/upload/v1684950522/iphone-xs-max_rx2ccd.png">
 
 <br>
 
 ### Testing links
 <hr>
 
-Results:
+<strong>Results:</strong>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+- Navbar works as expected, the only options which do not redirect users are 'Studio' and 'Press' (this is expected)
+- The buttons in the services and projects section do not redirect users to another page (this is expected)
+- The form in the contact section works as expected and upon submission the form takes the user to https://formdump.codeinstitute.net/
+- The telephone and email links in the footer work as expected
+- The social media icons in the footer work as expected
 
+Future development:
+
+- Create pages for the buttons and links which have been referenced on the points above
 
 <br>
 
@@ -547,7 +547,7 @@ The three websites used to validate the code are:
 - https://jigsaw.w3.org/css-validator/
 - https://pep8ci.herokuapp.com/
 
-For accessibility, the following websites and extensions were used:
+For accessibility, the following Chrome extensions were used:
 
 - WCAG Contrast Checker
 - Lighthouse
@@ -556,45 +556,67 @@ For accessibility, the following websites and extensions were used:
 
 #### HTML Validator
 <hr>
-Errors discovered:<br>
-<img src="">
+
+Website used to validate HTML code: https://validator.w3.org/
+
+<strong>Errors discovered:</strong>
+
+<img src="https://res.cloudinary.com/dys7tcjln/image/upload/v1684944334/html-checker-errors-and-warnings_evcmua.jpg">
 
 <br>
 
-Errors fixed:<br>
-<img src="">
+<strong>Errors fixed:</strong>
+
+<img src="https://res.cloudinary.com/dys7tcjln/image/upload/v1684944407/html-checker-validation_si7fvy.jpg">
 
 <br>
 
 #### CSS Validator
-Website used to validate CSS code: https://jigsaw.w3.org/css-validator/
 <hr>
-Errors discovered:<br>
-<img src="">
 
-Errors fixed:<br>
-<img src=""><br>
+Website used to validate CSS code: https://jigsaw.w3.org/css-validator/
+
+<strong>No errors discovered</strong>
+
+<img src="https://res.cloudinary.com/dys7tcjln/image/upload/v1684944421/css-validation_xmix9v.jpg">
 
 <br>
 
 #### WCAG Contrast Checker
 <hr>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+<img src="https://res.cloudinary.com/dys7tcjln/image/upload/v1684944421/css-validation_xmix9v.jpg">
+
+It's reported that there are four contrasting errors:
+
+- The two errors reported are in regards to the logo in the header and footer. There is no visibility issues as seen below
+- The same colours are used on buttons and no error has been reported in those instances
+
+<img src="https://res.cloudinary.com/dys7tcjln/image/upload/v1684946128/contrast-checker-logo_bfchac.jpg">
+
+<br>
+
+#### CI Python Linter
+<hr>
+
+Website used to validate Python code and files: https://pep8ci.herokuapp.com/
+
+Content to go here
 
 <br>
 
 #### Lighthouse
 <hr>
+
 Lighthouse has reported extemely positive metrics (see graphic below) with scores ranging from 90 to 100. The results are:
 
-- Performance: 96
+- Performance: 95
 - Accessibility: 100
 - Best practises: 92
 - SEO: 90
 
-<img src="">
-<br>
+<img src="https://res.cloudinary.com/dys7tcjln/image/upload/v1684944421/lighthouse-post-score_p0hkzc.jpg">
+
 <br>
 
 ## Deployment
