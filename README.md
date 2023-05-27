@@ -47,7 +47,6 @@ As a professional company, which serves both consumers and organisations, the we
 It's a services-orientated lead generation website, with the aim of converting as many visitors into leads. Alternatively, users can call or email the company for further information. 
 <br>
 <br>
-
 In summary, the site is to:
 
 - to potray high-value to attract clients with disposable income to invest loads of money
@@ -57,6 +56,21 @@ In summary, the site is to:
 - be able to communicate to both individuals and companies
 - make it accessible for all users
 - provide users with the option to reach out to Aspire via form, phone or email
+
+<br>
+
+### Database Schema
+<hr>
+
+Some final tweaks were made to the database schema such as:
+
+- the inclusion of slug
+- the inclusion of alt_image
+- the inclusion of updated_on
+- the inclusion of created_on
+- the exclusion of video_url
+
+<img src="https://res.cloudinary.com/dys7tcjln/image/upload/v1685227034/schema_sz3wfk.jpg">
 
 <br>
 
@@ -78,23 +92,70 @@ Equally, the website needs to appeal to individuals and families, but only to th
 
 The user stories for admin/staff:
 
-- As as Site Admin, I'd like to create, update, read and delete projects so that the website remains up-to-date with the latest work
+- As a Site Admin, I'd like to be able to create, read, update and delete projects/blogs so that the website remains up-to-date with the latest projects
+- As a Site Admin, I'd like to be able to move projects from one list to another
+- As a Site Admin, I'd like to be able to limit the number of projects displayed (for each section) on the homepage to three
 - As a Site Admin, I'd like to be able to approve users who register for a staff account
-- As a Site Admin, I'd like to be able to restrict access to unauthorised users to pages they're not permitted to see
+- As a Site Admin, I'd like to be able to restrict access and redirect unauthorised visitors to pages they're not permitted to see
 - As a Site Admin, I'd like to be able to login and logout from the website
+- As a Site Admin, I'd like to be able to access the Django Admin portal from the website
+- As a Site Admin, I'd like to be able to approve comments
 
-The user stories for a visitor:
+The user stories for a site user:
 
-- As a visitor, I'd like to be able to view the latest projects, whether current or finished
+- As a visitor, I'd like to be able to view the latest projects, whether current or finished, and blogs
 - As a visitor, I'd like to be able to contact Aspire via my choice of contact method: form, phone or email
 - As a visitor, I'd like to be able to have an enjoyable experience on the page, including easy navigation
+- As a visitor, I'd like to be able to filter projects and blogs by category (tagline)
+- As a visitor, I'd like to be able to add, edit and delete comments on blogs
+- As a visitor, I'd like to be able to like projects and blogs
+- As a visitor, I'd like to be able follow the company on social media
+- As a visitor, I'd like to be able to search for projects and blogs
+
+<br>
+
+### Agile Methodology
+<hr>
+
+ A kanban board on GitHub was used as an agile tool for the planning and development of Aspire Architecture.
+
+<img src="https://res.cloudinary.com/dys7tcjln/image/upload/v1685218214/kanban-board_s9obbe.jpg">
+
+<br>
+
+In total, the project consisted of six epics which are referenced and linked to user stories on the kanban board:
+
+ 1. Projects
+ 2. Moving projects to and from lists
+ 3. View projects
+ 4. Engagement
+ 5. Account
+ 6. Blogs
+ 7. Authorised access
+
+<br>
+
+#### MoSCoW
+<hr>
+
+The MoSCoW prioritisation technique was used as an agile work method for this project. To help priortise epics, and therefore subsequently user stories, three categories were definied:
+
+- must-have
+- should-have
+- could-have
+
+<img src="https://res.cloudinary.com/dys7tcjln/image/upload/v1685209879/MoSCoW_method_joix4d.jpg">
+
+<br>
+
+A project board was used to create epics and user stories by using the 'Issues' function. To view them, please click [here](https://github.com/lewis-worsley/aspire-architecture/issues).
 
 <br>
 
 ### Prototype
 <hr>
 
-The desktop and mobile prototypes for Aspire Architecture were designed in 2021 using Adobe software. Not every feature seen in the prototype have been replicated on the current version of the website, such as the testimonial section. 
+The desktop prototype for Aspire Architecture was designed using Adobe software. Not every feature seen in the prototype have been replicated on the current version of the website, such as the testimonial section. 
 
 <br>
 <strong>Desktop Prototype</strong>
@@ -745,6 +806,7 @@ To manage static and media files for the project by using a cloud service: https
 
 ## Languages
 <hr>
+
 The coding languages and frameworks used:
 
 - HTML
@@ -757,6 +819,7 @@ The coding languages and frameworks used:
 
 ## Software
 <hr>
+
 The design for Aspire Architecture was created via the Adobe Creative Cloud Suite; more specifically I used:
 
 - Abobe Photoshop
