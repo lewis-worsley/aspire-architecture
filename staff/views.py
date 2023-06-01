@@ -9,7 +9,7 @@ from .forms import RegisterStaffUserForm
 
 
 def login_staff_user(request):
-    """ 
+    """
     Logs users in
 
     """
@@ -38,7 +38,7 @@ def login_staff_user(request):
 
 
 def logout_staff_user(request):
-    """ 
+    """
     Logs out users
 
     """
@@ -49,7 +49,7 @@ def logout_staff_user(request):
 
 
 def register_staff_user(request):
-    """ 
+    """
     Register new users
 
     """

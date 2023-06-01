@@ -175,7 +175,7 @@ The brand has a five colour palette. Blue was selected as the primary colour bec
 - Mid Blue: #023c62
 - Light grey: #b8b9b8
 - Mid Grey: #605c5c
-- White: #fffs
+- White: #fff
 
 <br>
 
@@ -648,7 +648,7 @@ Website used to validate CSS code: https://jigsaw.w3.org/css-validator/
 #### WCAG Contrast Checker
 <hr>
 
-<img src="https://res.cloudinary.com/dys7tcjln/image/upload/v1684944421/css-validation_xmix9v.jpg">
+<img src="https://res.cloudinary.com/dys7tcjln/image/upload/v1684945613/contrast-checker_bxv7b5.jpg">
 
 It's reported that there are four contrasting errors:
 
@@ -662,9 +662,9 @@ It's reported that there are four contrasting errors:
 #### CI Python Linter
 <hr>
 
-Website used to validate Python code and files: https://pep8ci.herokuapp.com/
+Website used to validate Python files: https://pep8ci.herokuapp.com/
 
-Content to go here
+No errors are currently reported apart from in the settings.py on line 125 (variable: AUTH_PASSWORD_VALIDATORS). However, that isn't of concern due to the nature of how the variable is created during installation of Python. 
 
 <br>
 

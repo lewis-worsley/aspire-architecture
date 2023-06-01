@@ -7,7 +7,7 @@ from project.forms import ProjectForm, UpdateProjectForm
 
 
 def home_view(request):
-    """ 
+    """
     Displays home view and creates queryset for projects
 
     """
@@ -24,7 +24,7 @@ def home_view(request):
 
 
 def create_project_view(request):
-    """ 
+    """
     Creates a new project
 
     """
@@ -48,7 +48,7 @@ def create_project_view(request):
 
 
 def edit_project(request, slug):
-    """ 
+    """
     Edits the projects
 
     """
@@ -76,7 +76,7 @@ def edit_project(request, slug):
 
 
 def delete_project(request, slug):
-    """ 
+    """
     Delete projects
 
     """
