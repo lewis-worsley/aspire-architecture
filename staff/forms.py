@@ -13,7 +13,7 @@ class RegisterStaffUserForm(UserCreationForm):
         validators=[
             RegexValidator(
                 regex='^^\w+@aspire\.com$',
-                message='Invalid email address. Please use the @aspire.com domain',
+                message='Invalid email address. Please use @aspire.com domain',
                 code='invalid email address'
             ),
         ])

@@ -8,8 +8,11 @@ import re
 from .forms import RegisterStaffUserForm
 
 
-# Linked to login.html
 def login_staff_user(request):
+    """ 
+    Logs users in
+
+    """
 
     user = request.user
 
@@ -27,22 +30,29 @@ def login_staff_user(request):
             return redirect('home')
         else:
             messages.error(
-                request, "Incorrect login details. Invalid username or password.")
+                request, "Invalid username or password.")
             return redirect('login')
 
     else:
         return render(request, 'staff/login.html', {})
 
 
-# Not linked to any page but logout can be found in the footer
 def logout_staff_user(request):
+    """ 
+    Logs out users
+
+    """
+
     logout(request)
     messages.success(request, "You're now logged out!")
     return redirect('home')
 
 
-# Linked to register.html
 def register_staff_user(request):
+    """ 
+    Register new users
+
+    """
 
     user = request.user
 

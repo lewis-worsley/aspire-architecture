@@ -6,8 +6,11 @@ from project.models import Project
 from project.forms import ProjectForm, UpdateProjectForm
 
 
-# Linked to home.html
 def home_view(request):
+    """ 
+    Displays home view and creates queryset for projects
+
+    """
 
     context = {}
 
@@ -20,8 +23,11 @@ def home_view(request):
     return render(request, 'project/home.html', context)
 
 
-# Linked to create_new_project.html
 def create_project_view(request):
+    """ 
+    Creates a new project
+
+    """
 
     if request.method == "POST":
         form = ProjectForm(request.POST or None, request.FILES or None)
@@ -30,7 +36,7 @@ def create_project_view(request):
             item = form.save(commit=False)
             item.slug = slugify(item.project_name)
             item.save()
-            messages.success(request, f"New project created: {item.project_name}")
+            messages.success(request, f"Project created: {item.project_name}")
             return redirect('/#projects')
 
     form = ProjectForm()
@@ -41,14 +47,17 @@ def create_project_view(request):
     return render(request, 'project/create_new_project.html', context)
 
 
-# Linked to edit_project.html
 def edit_project(request, slug):
+    """ 
+    Edits the projects
+
+    """
 
     project = get_object_or_404(Project, slug=slug)
 
     if request.method == "POST":
-        form = UpdateProjectForm(request.POST or None, request.FILES or None,
-                instance=project)
+        form = UpdateProjectForm(
+             request.POST or None, request.FILES or None, instance=project)
 
         if form.is_valid():
             item = form.save(commit=False)
@@ -66,8 +75,11 @@ def edit_project(request, slug):
     return render(request, 'project/edit_project.html', context)
 
 
-# Linked to deletes_project.html
 def delete_project(request, slug):
+    """ 
+    Delete projects
+
+    """
 
     project = get_object_or_404(Project, slug=slug)
 
